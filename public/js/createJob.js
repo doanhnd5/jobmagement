@@ -18,25 +18,20 @@ $(function() {
         confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
             // Loading
             openLoading();
-            const param = {};
-            param['id']                   = $('#txtJobId').val();
-            param['date_time_display']    = $('#txtDatetimeDisplay').val();
-            param['job_name']             = $('#txtJobName').val();
-            param['employment_type_id']   = $('#ddlEmployeeType').val();
-            param['workplace_prefecture'] = $('#ddlJobArea').val();
-            param['tag']                  = $('input[name="chkTag"]:checked').map((index, item) => { return $(item).val() }).get();
-            param['workplace_city']       = $('#txtWorkPlaceCity').val();
-            param['work_time_from']       = getTimeParam('#txtWorkTimeFrom');
-            param['work_time_to']         = getTimeParam('#txtWorkTimeTo');
-            param['salary']               = $('#txtSalary').val();
-            param['description']          = $('#txtDescription').val();
-            param['company_name']         = $('#txtCompany').val();
+            let imageEle    = document.getElementById('txtImage');
+            let formData    = new FormData();
+            let registParam = getRegistParam();
+            let imageFile   = imageEle.files[0];
+            formData.append('image', imageFile);
+            formData.append('paramRegist', JSON.stringify(registParam));
 
             $.ajax({
                 url      : $('#btnRegist').data('url'),
                 type     : 'POST',
-                data     : param,
-                dataType : 'json'
+                data     : formData,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                processData: false,
             }).done(function (data) {
                 if (data.status == PROCESS_STATUS_SUCCESS) {
                     alertExPromiseSuccess(data.alertMsg).then(function(){
@@ -67,6 +62,24 @@ $(function() {
     });
 
 });
+
+function getRegistParam() {
+    const param = {};
+    param['id']                   = $('#txtJobId').val();
+    param['date_time_display']    = $('#txtDatetimeDisplay').val();
+    param['job_name']             = $('#txtJobName').val();
+    param['employment_type_id']   = $('#ddlEmployeeType').val();
+    param['workplace_prefecture'] = $('#ddlJobArea').val();
+    param['tag']                  = $('input[name="chkTag"]:checked').map((index, item) => { return $(item).val() }).get();
+    param['workplace_city']       = $('#txtWorkPlaceCity').val();
+    param['work_time_from']       = getTimeParam('#txtWorkTimeFrom');
+    param['work_time_to']         = getTimeParam('#txtWorkTimeTo');
+    param['salary']               = $('#txtSalary').val();
+    param['description']          = $('#txtDescription').val();
+    param['company_name']         = $('#txtCompany').val();
+    param['is_important']         = $('input[name="rdoJobImportant"]:checked').val();
+    return param;
+}
 
 function setErrorMsgListRegist(errMstList) {
     const className = 'mb-6';

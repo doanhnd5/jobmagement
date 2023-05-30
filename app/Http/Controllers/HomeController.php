@@ -61,9 +61,9 @@ class HomeController extends Controller
 
     private function getHtmlHotJobList()
     {
-        $jobWork     = new JobWork();
-        $jobWorkList = $jobWork->getJobWorkList($this->srchList);
-        return $jobWorkList;
+        $jobWork        = new JobWork();
+        $hotJobWorkList = $jobWork->getHotJobList();
+        return $hotJobWorkList;
     }
 
     private function getJobWorkBasicList()

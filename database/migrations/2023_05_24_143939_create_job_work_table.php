@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('workplace_prefecture')->comment('Khu vực');
             $table->string('workplace_city')->comment('Thành phố');
             $table->text('description')->nullable()->comment('Nội dung công việc');
-            $table->string('image_url')->nullable()->comment('Ảhh đại diện công việc');
+            $table->string('image_name')->nullable()->comment('Ảhh đại diện công việc');
+            $table->boolean('is_important')->comment('Ảhh đại diện công việc');
             $table->timestamp('create_datetime')->nullable()->comment('Thời gian đăng job');
             $table->string('create_user', 256)->nullable()->comment('Người đăng job');
             $table->timestamp('update_datetime')->nullable()->comment('Thời gian sửa job');

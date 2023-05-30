@@ -60,12 +60,14 @@ $(function() {
         }).catch(function(e) {});
     });
 
-    $('#btnBack').click(function(e) {
-        // Loading
-        openLoading();
-        let url = $(this).data('url');
-        url = addUrlParamToBackPageLnk(url);
-        window.location.href = url;
+    $('#btnCancel').click(function(e) {
+        confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
+            // Loading
+            openLoading();
+            let url = $('#btnCancel').data('url');
+            url = addUrlParamToBackPageLnk(url);
+            window.location.href = url;
+        }).catch(function(e) {});
     });
 
 });

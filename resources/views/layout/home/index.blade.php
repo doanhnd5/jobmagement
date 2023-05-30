@@ -113,7 +113,7 @@
                                         <div class="popularCard_inner_photo w-full mb-2 lg:mb-0">
                                             <figure class="aspect-[143/100] mb-2">
                                                 <img class="h-full object-cover"
-                                                    src="{{ $job->image_url ? $job->image_url : asset('image/uploaded/job_1.jpg') }}"
+                                                    src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
                                                     width="100%" alt="">
                                             </figure>
                                             <p class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2">

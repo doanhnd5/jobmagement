@@ -12,7 +12,7 @@ class JobWork extends Model
     public $timestamps = false;
     protected $guarded = ['id'];
 
-    public function getJobWorkList($srchList)
+    public function getJobWorkList($srchList, $ignoreHotJob = false)
     {
         $jobWorkList = $this->leftJoin('job_tag', 'job_tag.job_id', 'job_work.id')
             ->when(isset($srchList['srchArea']), function($query) use ($srchList) {
@@ -29,8 +29,9 @@ class JobWork extends Model
                         ->orWhere('job_work.workplace_city', 'like', "%$srchJobType%");
                 });
             })
-            ->where('job_work.is_important', false)
-            ->
+            ->when($ignoreHotJob, function($query) {
+                $query->where('job_work.is_important', false);
+            })->
             select(
                 'job_work.id',
                 'job_work.job_name',
@@ -40,7 +41,8 @@ class JobWork extends Model
                 'job_work.work_time_from',
                 'job_work.work_time_to',
                 'job_work.workplace_prefecture',
-                'job_work.workplace_city'
+                'job_work.workplace_city',
+                'job_work.image_name'
             )->orderBy('job_work.id', 'asc')
             ->distinct()
             ->get();
@@ -59,7 +61,8 @@ class JobWork extends Model
             'job_work.work_time_from',
             'job_work.work_time_to',
             'job_work.workplace_prefecture',
-            'job_work.workplace_city'
+            'job_work.workplace_city',
+            'job_work.image_name'
             )->orderBy('job_work.id', 'asc')
             ->get();
         return $hotJobList;

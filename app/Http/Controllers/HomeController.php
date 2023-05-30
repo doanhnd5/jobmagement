@@ -44,14 +44,15 @@ class HomeController extends Controller
         }
     }
 
-    public function getJobList (Request $request)
+    public function getJobList(Request $request)
     {
         try {
             $this->setSrchList($request);
-            $jobWork     = new JobWork();
-            $jobWorkList = $jobWork->getJobWorkList($this->srchList)->paginate(ScreenConst::MAX_PER_PAGE_HOME_LIST);
+            $jobWork        = new JobWork();
+            $jobWorkList    = $jobWork->getJobWorkList($this->srchList, true)->paginate(ScreenConst::MAX_PER_PAGE_HOME_LIST);
+            $hotJobWorkList = $jobWork->getHotJobList();
             $param = [];
-            $param['jobWorkHotList'] = $jobWorkList;
+            $param['jobWorkHotList'] = $hotJobWorkList;
             $param['jobBasicList']   = $jobWorkList;
             return view('layout.home.list', $param);
         } catch (\Exeption $ex) {
@@ -69,7 +70,7 @@ class HomeController extends Controller
     private function getJobWorkBasicList()
     {
         $jobWork     = new JobWork();
-        $jobWorkList = $jobWork->getJobWorkList($this->srchList);
+        $jobWorkList = $jobWork->getJobWorkList($this->srchList, true);
         return $jobWorkList;
     }
 

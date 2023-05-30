@@ -29,7 +29,7 @@
                                         <div class="popularCard_inner_photo w-full mb-2 lg:mb-0">
                                             <figure class="aspect-[143/100] mb-2">
                                                 <img class="h-full object-cover"
-                                                    src="{{ $job->image_url ? $job->image_url : asset('image/uploaded/job_1.jpg') }}"
+                                                    src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
                                                     width="100%" alt="">
                                             </figure>
                                             <p class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2">
@@ -95,8 +95,8 @@
                                     </h3>
                                     <a class="recDetail mb-2">
                                         <div class="flex justify-between items-center mb-4">
-                                            <figure class="w-1/3 aspect-[53/40]">
-                                                <img src="{{ $job->image_url ? $job->image_url : asset('image/uploaded/job_1.jpg') }}" width="282" height="212" alt="" class="w-full h-full object-cover">
+                                            <figure class="w-1/3 aspect-[53/40]" data-url="{{ route('detail', ['id' => $job['id']]) }}">
+                                                <img src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}" width="282" height="212" alt="" class="w-full h-full object-cover">
                                             </figure>
                                             <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 line-clamp-2">
                                                 {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}
@@ -137,7 +137,7 @@
                                 </li>
                             @endforeach
                         @else
-                            <li class="">Không có thông tin tuyển dụng với từ khóa bạn đang tìm kiếm</li>
+                            <li class="">Không có thông tin tuyển dụng</li>
                         @endif
                     </ul>
                 </div>
@@ -152,4 +152,5 @@
 @stop
 
 @section('js')
+    <script src="{{ asset('js/home.js') }}"></script>
 @stop

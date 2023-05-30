@@ -15,6 +15,21 @@ $(function() {
     $(document).on('click', '#btnSearch', function() {
         search($(this).data('url'));
     });
+
+    $(document).on('click', 'a', function(e) {
+        openLoading();
+        e.preventDefault();
+        window.location.href = $(this).attr('href');
+    });
+
+    $(document).on('click', '#btnSearch', function() {
+        search($(this).data('url'));
+    });
+
+    $(document).on('click', '#list_job figure', function(e) {
+        openLoading();
+        window.location.href = $(this).data('url');
+    });
 });
 
 function search(url) {

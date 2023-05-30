@@ -898,3 +898,8 @@ info {
     translate: -40% -50%;
     rotate: 270deg;
   }
+
+  .wp-post-image {
+    width: 87px;
+    height: 70px
+  }

@@ -15,12 +15,7 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
-    openLoading();
-
-    window.onload = setTimeout(() => {
-        closeLoading()
-    }, 1000);
-
+    closeLoading();
 
     $.ajaxSetup({
         headers: {

@@ -154,7 +154,9 @@
                 </div>
             </div>
             <div class="flex items-center justify-center mt-4 mb-10">
-                <button type="button" id="btnCancel" class="mr-2 flex justify-center items-center h-[50px] w-[187px] rounded bg-[#F5CE0A]">
+                <button type="button" id="btnCancel" class="mr-2 flex justify-center items-center h-[50px] w-[187px] rounded bg-[#F5CE0A]"
+                    data-cfm-msg="{{ __('messages.I0001', ['attribute1' => 'hủy ứng tuyển', 'attribute2' => 'job']) }}"
+                    data-url="{{ route('get_job_list') }}">
                     <span class="text-white text-[14px]">Hủy</span>
                 </button>
                 <button type="button" id="btnApply" class="flex justify-center items-center h-[50px] w-[187px] rounded bg-[#FF7A00]"

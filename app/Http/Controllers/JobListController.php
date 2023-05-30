@@ -116,12 +116,6 @@ class JobListController extends Controller
         return view('layout.job.search_job', $param)->render();
     }
 
-    private function getJobWorkList()
-    {
-        $jobWorkList = JobWork::all();
-        return $jobWorkList;
-    }
-
     private function setSrchList(Request $request)
     {
         $this->srchList['srchArea']    = $request->srchJobArea ?? null;

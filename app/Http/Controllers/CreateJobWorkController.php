@@ -154,7 +154,6 @@ class CreateJobWorkController extends Controller
                 ];
                 return response()->json($data);
             } catch (\Exeption $ex) {
-                logger($ex);
                 DB::rollBack();
                 $data = [
                     'status'   => ScreenConst::PROCESS_STATUS_ERROR,
@@ -163,7 +162,6 @@ class CreateJobWorkController extends Controller
                 return response()->json($data);
             }
         } catch (\Exeption $ex) {
-            logger($ex);
             DB::rollBack();
             $data = [
                 'status'   => ScreenConst::PROCESS_STATUS_SYSTEM_ERROR,
@@ -206,7 +204,7 @@ class CreateJobWorkController extends Controller
 
     private function setUploadedImageInfor($request)
     {
-        if ($request->has('image')) {
+        if (isset($_FILES['image'])) {
             $this->tmpPath   = $_FILES['image']['tmp_name'];
             $this->imageName = $_FILES['image']['name'];
         }

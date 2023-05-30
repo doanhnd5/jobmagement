@@ -13,31 +13,31 @@
     <thead>
         <tr>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Họ và tên</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Giới tính</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Email</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Số điện thoại</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Địa chỉ</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Job ứng tuyển</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Ngày ứng tuyển</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Trạng thái</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Xác nhận</th>
         </tr>
     </thead>
@@ -45,31 +45,27 @@
         @foreach ($candidatesList as $candidatesData)
             <tr>
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="ml-4">
-                        <div class="text-sm font-medium leading-5 text-gray-900">
-                            {{  $candidatesData['first_name'] . ' ' . $candidatesData['last_name']  }}
-                        </div>
-                    </div>
+                    {{  $candidatesData['first_name'] . ' ' . $candidatesData['last_name']  }}
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  ScreenConst::GENDER_NAME[$candidatesData['gender']] }}</div>
+                    {{  ScreenConst::GENDER_NAME[$candidatesData['gender']] }}
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{ $candidatesData['email'] }}</div>
+                    {{ $candidatesData['email'] }}
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $candidatesData['phone_number'] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    {{  $candidatesData['phone_number'] }}
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $candidatesData['address'] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    {{  $candidatesData['address'] }}
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $candidatesData['job_name'] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    {{  $candidatesData['job_name'] }}
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $candidatesData['apply_date'] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    {{  $candidatesData['apply_date'] }}
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
                     @if ($candidatesData['is_contacted'])
                         Đã liên hệ
                     @else

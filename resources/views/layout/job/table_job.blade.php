@@ -2,28 +2,28 @@
     <thead>
         <tr>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Tên Job</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Hình thức nhân viên</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Mức lương</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Thời gian làm việc</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Khu vực</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Thành phố</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Edit</th>
             <th
-                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200">
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Delete</th>
         </tr>
     </thead>
@@ -38,24 +38,24 @@
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}</div>
+                    <div class="text-sm leading-5">{{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}</div>
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $jobWork['salary'] . '万' }}</div>
+                <td class="px-6 py-4 text-sm leading-5  whitespace-no-wrap border-b border-gray-200 text-center">
+                    <div class="text-sm leading-5">{{  $jobWork['salary'] . '万' }}</div>
                 </td>
                 @php
                     $workTimeFrom = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_from']);
                     $workTimeTo   = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_to']);
                     $workTime     = $workTimeFrom . ' ～ ' . $workTimeTo;
                 @endphp
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $workTime }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    <div class="text-sm leading-5 ">{{  $workTime }}</div>
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{ ScreenConst::JOB_AREA_NAME[$jobWork['workplace_prefecture']] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    <div class="text-sm leading-5">{{ ScreenConst::JOB_AREA_NAME[$jobWork['workplace_prefecture']] }}</div>
                 </td>
-                <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5 text-gray-500">{{  $jobWork['workplace_city'] }}</div>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    <div class="text-sm leading-5 ">{{  $jobWork['workplace_city'] }}</div>
                 </td>
                 <td class="px-6 py-4 border-b border-gray-200">
                     <a class="detail" href="{{ route('create.index', ['id' => $jobWork['id'] ]) }}">

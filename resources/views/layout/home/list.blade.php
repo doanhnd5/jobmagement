@@ -152,5 +152,5 @@
 @stop
 
 @section('js')
-    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/list.js') }}"></script>
 @stop

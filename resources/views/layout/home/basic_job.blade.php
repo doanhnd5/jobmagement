@@ -31,7 +31,7 @@
                     <h2>
                         <span class="text_excerpt">
                             <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
-                            {{ $job['salary'] . '万' }}
+                            {{ $job['salary'] . '円' }}
                         </span>
                     </h2>
                 </div>
@@ -49,9 +49,9 @@
         </a>
     </div>
 @else
-<div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
-<div class="popular-see-more text-center md:mb-4">
-    Không có thông tin tuyển dụng liên quan đến từ khóa bạn đang tìm kiếm!
-</div>
+    <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
+    <div class="popular-see-more text-center md:mb-4">
+        Không có thông tin tuyển dụng liên quan đến từ khóa bạn đang tìm kiếm!
+    </div>
 @endif
 

@@ -59,7 +59,7 @@
                                                     <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
                                                 </li>
                                                 <li class="item-text pl-1 self-center truncate">
-                                                    <span class="inline-block">{{ $job->salary . '万' }}</span>
+                                                    <span class="inline-block">{{ $job->salary . '円' }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -110,7 +110,7 @@
                                             <dl>
                                                 <dt class="icon-currency-yen-blue"><span class="font-bold">Mức lương</span></dt>
                                                 <dd>
-                                                    {{ $job->salary .'万'}}
+                                                    {{ $job->salary .'円'}}
                                                 </dd>
                                             </dl>
                                             <dl>

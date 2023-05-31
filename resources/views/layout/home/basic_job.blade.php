@@ -15,7 +15,7 @@
                     </figure>
                 </div>
                 <div class="job_detail">
-                    <p>{{ $job['job_name'] }}</p>
+                    <p class="job-name-detail">{{ $job['job_name'] }}</p>
                     <h2>
                         <span class="text_excerpt">
                             <i class="icon-business-center-blue w-3.5 h-3.5"></i>
@@ -41,13 +41,15 @@
     </ul>
 </div>
 @if ($jobWorkBasicList->count() != 0)
-    <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
-    <div class="popular-see-more text-center md:mb-4">
-        <a href="{{ route('get_job_list') }}" class="see-more-btn inline-flex items-center">
-            <span class="font-bold text-sm leading-[26px] tracking-wider text-main-blue">Xem thêm</span>
-            <i class="icon-chevron-right-blue w-6 h-6"></i>
-        </a>
-    </div>
+    @if ($jobWorkBasicList->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
+        <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
+        <div class="popular-see-more text-center md:mb-4">
+            <a href="{{ route('get_job_list') }}" class="see-more-btn inline-flex items-center">
+                <span class="font-bold text-sm leading-[26px] tracking-wider text-main-blue">Xem thêm</span>
+                <i class="icon-chevron-right-blue w-6 h-6"></i>
+            </a>
+        </div>
+    @endif
 @else
     <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
     <div class="popular-see-more text-center md:mb-4">

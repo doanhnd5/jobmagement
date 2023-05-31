@@ -143,7 +143,7 @@
                                                     <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
                                                 </li>
                                                 <li class="item-text pl-1 self-center truncate">
-                                                    <span class="inline-block">{{ $job->salary . '万' }}</span>
+                                                    <span class="inline-block">{{ $job->salary . '円' }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -173,7 +173,7 @@
                 <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Danh sách job đang tuyển dụng</span>
             </h2>
         </div>
-        <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8" id="divWorkBasic">
+        <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #e7f1f1">
             <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
                 <ul class="hot_job">
                     {!! $htmlJobWorkBasicArea !!}

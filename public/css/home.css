@@ -31,6 +31,12 @@ label.error {
     overflow: hidden;
 }
 
+.job-name-detail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @media screen and (min-width:768px) {
     #map iframe {
         width: 100%;

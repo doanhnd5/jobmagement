@@ -26,7 +26,7 @@
                                 <a href="{{ route('detail', ['id' => $job['id']]) }}"
                                     class="popularCard block px-1 slick-slide slick-current slick-active">
                                     <div class="popularCard_inner flex-col p-0 lg:bg-white">
-                                        <div class="popularCard_inner_photo w-full mb-2 lg:mb-0">
+                                        <div class="popularCard_inner_photo mb-2 lg:mb-0">
                                             <figure class="aspect-[143/100] mb-2">
                                                 <img class="h-full object-cover"
                                                     src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
@@ -38,7 +38,7 @@
                                                 {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}</h3>
                                         </div>
                                         <div
-                                            class="popularCard_inner_info w-full font-light text-[11px] leading-5 text-333 lg:p-2">
+                                            class="popularCard_inner_info font-light text-[11px] leading-5 text-333 lg:p-2">
                                             <ul class="popularCard_inner_place flex">
                                                 <li class="item w-3.5 flex items-center">
                                                     <i class="icon-location-on-fill-blue w-3.5 h-3.5"></i>

@@ -104,7 +104,7 @@ class HomeController extends Controller
 
     private function getJobWorkBasicHtmlArea()
     {
-        $jobWorkBasicList     = $this->getJobWorkBasicList();
+        $jobWorkBasicList     = $this->getJobWorkBasicList()->take(12);
         $htmlJobWorkBasicArea = view('layout.home.basic_job', ['jobWorkBasicList' =>  $jobWorkBasicList])->render();
         return $htmlJobWorkBasicArea;
     }

@@ -43,7 +43,7 @@ class JobWork extends Model
                 'job_work.workplace_prefecture',
                 'job_work.workplace_city',
                 'job_work.image_name'
-            )->orderBy('job_work.id', 'asc')
+            )->orderBy('job_work.id', 'desc')
             ->distinct()
             ->get();
         return $jobWorkList;

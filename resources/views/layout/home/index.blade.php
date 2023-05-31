@@ -173,7 +173,7 @@
                 <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Danh sách job đang tuyển dụng</span>
             </h2>
         </div>
-        <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8" id="divWorkBasic">
+        <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #e7f1f1">
             <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
                 <ul class="hot_job">
                     {!! $htmlJobWorkBasicArea !!}

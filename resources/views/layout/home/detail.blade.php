@@ -48,7 +48,17 @@
                         <p class="font-bold text-lg">Nội dung công việc</p>
                     </div>
                     <div class="font-light text-sm tracking-[.04em] text-5">
-                        {!! nl2br($jobWork['description']) ?? null !!}
+                        @php
+                            $descriptionList = [];
+                            if (isset($jobWork['description'])) {
+                                $descriptionList = explode("\n", $jobWork['description']);
+                            }
+                        @endphp
+                        <ol>
+                            @foreach ($descriptionList as $description)
+                                <li class="description">{{ $description }}</li>
+                            @endforeach
+                        </ol>
                     </div>
                 </div>
             </div>

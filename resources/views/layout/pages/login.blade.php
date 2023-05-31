@@ -6,7 +6,7 @@
             <div class="px-2 mt-4">
                 <h1 class="font-serif font-bold text-2xl text-center text-main-blue">
                     <a href="#">
-                        <img src="{{ asset('image/jobsempai_logo.png')}}" width="470" height="190" alt="jobsempai.com" class="m-auto">
+                        <img src="{{ asset('image/logo2.png')}}" width="470" height="190" alt="jobsempai.com" class="m-auto">
                     </a>
                 </h1>
                 <div class="px-7 mb-2">

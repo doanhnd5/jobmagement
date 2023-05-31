@@ -3,11 +3,11 @@
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0 mb-[50px] md:mb-25">
         <div class="fv-slider relative h-[260px]">
-            <img src="{{ asset('image/jobsempai_layer.jpg') }}" class="w-full h-full object-cover">
+            <img src="{{ asset('image/banner.jpg') }}" class="w-full h-full object-cover">
             <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
                 <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Giới thiệu việc làm miễn phí,<br
-                        class="lg:hidden">hỗ trợ tận tâm</p>
+                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Visa - Job<br
+                        class="lg:hidden">Japan</p>
                 <div class="searchBox w-full max-w-[972px] h-auto p-2.5 rounded-lg lg:p-8 mx-auto">
                     <form method="get" id="searchform" action="#" class="flex gap-2 flex-wrap">
                         <input type="hidden" name="size" value="200">
@@ -143,7 +143,7 @@
                                                     <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
                                                 </li>
                                                 <li class="item-text pl-1 self-center truncate">
-                                                    <span class="inline-block">{{ $job->salary . '万' }}</span>
+                                                    <span class="inline-block">{{ $job->salary . '円' }}</span>
                                                 </li>
                                             </ul>
                                         </div>

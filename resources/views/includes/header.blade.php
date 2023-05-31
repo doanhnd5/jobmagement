@@ -9,7 +9,7 @@
                 <h1 class="ml-2">
                     <a href="{{ route('home') }}">
                         <div class="text-black font-bold">
-                            <img src="{{asset('image/jobsempai_logo.png')}}" width="122" height="49" alt="jobsempai.com"/>
+                            <img src="{{asset('image/logo2.png')}}" width="122" height="49" alt="jobsempai.com"/>
                         </div>
                     </a>
                 </h1>

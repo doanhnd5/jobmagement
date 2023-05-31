@@ -110,7 +110,7 @@
                                             <dl>
                                                 <dt class="icon-currency-yen-blue"><span class="font-bold">Mức lương</span></dt>
                                                 <dd>
-                                                    {{ $job->salary .'万'}}
+                                                    {{ $job->salary .'円'}}
                                                 </dd>
                                             </dl>
                                             <dl>

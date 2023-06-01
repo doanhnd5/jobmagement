@@ -82,3 +82,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
  - php artisan db:seed
 3. Run
  - php artisan serve
+
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear

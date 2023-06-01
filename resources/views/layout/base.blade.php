@@ -4,7 +4,7 @@
         {{-- Meta Tag --}}
         @include('includes.element.meta')
 
-        <title>Jobsempai.com</title>
+        <title>Job-visa</title>
 
         {{-- CSS --}}
         @include('includes.element.link')

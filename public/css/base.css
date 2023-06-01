@@ -947,13 +947,17 @@ info {
     text-align: center;
   }
   /*CSS for mobile*/
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 900px) {
   #footer {
       padding: 20px;
+      background: #000;   /* Add a background color (change as needed) */
+
   }
 
   .footer-inner {
       text-align: center; /* Center all content */
+      
   }
 
   .footer-logo {
@@ -971,8 +975,16 @@ info {
   }
 
   .footer-links ul li a {
-      color: #ffffff;
+      color: #ff7b00;
       text-decoration: none;
+      display: flex;       /* Make this a flex container */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      bottom: 0;          /* Position at bottom of screen */
+      left: 0;            /* Position at left of screen */
+      width: 100%;        /* Full width */
+      padding: 10px 0;    /* Add some vertical padding */
+      font-size: 12px;    /* Reduce font size */
   }
 
   .footer-links ul li a:hover {
@@ -986,11 +998,11 @@ info {
 
   .footer-social a {
       margin: 0 10px; /* Add some horizontal spacing between icons */
-      color: #ffffff;
+      color: #ff7b00;
   }
 
   .footer-social a:hover {
-      color: #dddddd;
+      color: #ff7b00;
   }
 
   .footer-bottom {

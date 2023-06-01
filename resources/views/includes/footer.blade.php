@@ -11,13 +11,13 @@
         <li><a href="/">Liên hệ</a></li>
       </ul>
     </div>
-    <div class="footer-social">
+  </div>
+  <div class="footer-bottom">
+  <div class="footer-social">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-  </div>
-  <div class="footer-bottom">
   </div>
     <p class="copyright bg-black text-white text-xs text-center leading-[26px] tracking-wider">Copyright ©Visa-job All Rights Reserved.</p>
 </footer>

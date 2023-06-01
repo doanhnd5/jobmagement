@@ -303,11 +303,8 @@
     font-size: 19px;
     line-height: 25px;
     /* identical to box height */
-
     letter-spacing: 0.05em;
-
     color: #c23244;
-
     transform: matrix(0.99, -0.18, 0.17, 0.98, 0, 0);;
   }
   .popularCardlist {
@@ -949,4 +946,59 @@ info {
     margin-top: 20px;
     text-align: center;
   }
-  
+  /*CSS for mobile*/
+@media screen and (max-width: 600px) {
+  #footer {
+      padding: 20px;
+  }
+
+  .footer-inner {
+      text-align: center; /* Center all content */
+  }
+
+  .footer-logo {
+      margin-bottom: 20px; /* Add some spacing below the logo */
+  }
+
+  .footer-links ul {
+      list-style-type: none; /* Remove bullets */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margins */
+  }
+
+  .footer-links ul li {
+      margin-bottom: 10px; /* Add some spacing between list items */
+  }
+
+  .footer-links ul li a {
+      color: #ffffff;
+      text-decoration: none;
+  }
+
+  .footer-links ul li a:hover {
+      color: #dddddd;
+      text-decoration: underline;
+  }
+
+  .footer-social {
+      margin-top: 20px; /* Add some spacing above the social icons */
+  }
+
+  .footer-social a {
+      margin: 0 10px; /* Add some horizontal spacing between icons */
+      color: #ffffff;
+  }
+
+  .footer-social a:hover {
+      color: #dddddd;
+  }
+
+  .footer-bottom {
+      margin-top: 20px; /* Add some spacing above the bottom section */
+  }
+
+  .copyright {
+      font-size: 14px; /* Smaller font size for mobile */
+      padding: 10px 0;
+  }
+}

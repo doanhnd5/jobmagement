@@ -40,6 +40,7 @@
         @endforeach
     </ul>
 </div>
+
 @if ($jobWorkBasicList->count() != 0)
     @if ($jobWorkBasicList->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
         <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>

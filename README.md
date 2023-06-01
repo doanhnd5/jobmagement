@@ -61,9 +61,16 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## Chạy project trên server ubuntu
+1. Cài nodejs 
+2. Cài npm
+ - sudo apt install nodejs npm
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ cài pm2 để quản lý terminal 
+ - npm install pm2 -g
+
+3. Chạy dự án bằng pm2 
+  - pm2 start artisan --name "job-visa" --interpreter php -- serve --host=0.0.0.0 --port=8000
 
 1. Môi trường
  - Cài đặt PHP 8.2

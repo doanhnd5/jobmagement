@@ -96,7 +96,7 @@
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
             <div class="sectionTitle text-center">
-                <h2 class="font-serif font-medium text-base md:text-xl text-center text-4E4A40 my-2.5">
+                <h2 class="font-serif font-medium text-base md:text-xl text-center text-white text-4E4A40 my-2.5">
                     <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Thông tin tuyển dụng<br
                             class="md:hidden"> đang hot</span>
                 </h2>
@@ -169,11 +169,27 @@
 
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="text-center">
-            <h2 class="font-serif font-medium text-base md:text-xl text-center text-4E4A40 my-2.5">
-                <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Danh sách job đang tuyển dụng</span>
-            </h2>
+        <h2 class="font-serif font-medium text-base md:text-xl text-center text-FFA500 my-2.5">
+            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc mới nhất trong tuần</span>
+        </h2>
+
         </div>
-        <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #e7f1f1">
+        <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFDD">
+            <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
+                <ul class="hot_job">
+                    {!! $htmlJobWorkBasicArea !!}
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
+        <div class="text-center">
+        <h2 class="font-serif font-medium text-base md:text-xl text-center text-FFA500 my-2.5">
+            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Có thể bạn quan tâm</span>
+        </h2>
+
+        </div>
+        <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFDD">
             <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
                 <ul class="hot_job">
                     {!! $htmlJobWorkBasicArea !!}

@@ -3,7 +3,7 @@
 @endphp
 
 <header id="header">
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500">
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500" >
         <div class="inner bg-white w-full flex fixed top-0 z-100">
             <div class="header__logo self-center">
                 <h1 class="ml-2">
@@ -22,6 +22,7 @@
                     求人情報一覧
                 </a>
             @endif
+            <div id='google_translate_element'></div>
         </div>
     </nav>
 </header>

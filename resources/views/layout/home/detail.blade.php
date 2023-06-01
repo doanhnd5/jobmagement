@@ -15,22 +15,22 @@
                     <div class="flex justify-center items-center mr-[3px]">
                         <i class="icon-group-fill-blue w-4 h-4"></i>
                     </div>
-                    <div class="font-bold text-xs leading-[18px] tracking-wider text-[#666]">Hình thức</div>
-                    <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#666]">
+                    <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Hình thức</div>
+                    <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
                         {{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}
                     </div>
                     <div class="flex justify-center items-center mr-[3px]">
                         <i class="icon-currency-yen-blue w-4 h-4"></i>
                     </div>
-                    <div class="font-bold text-xs leading-[18px] tracking-wider text-[#666]">Mức lương</div>
-                    <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#666]">
+                    <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Mức lương</div>
+                    <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
                         {{ $jobWork['salary'] . '円' }}
                     </div>
                 </div>
                 <div class="list_tag flex flex-wrap gap-[8px] mt-[8px]">
                     <div class="flex flex-wrap gap-2">
                         @foreach ($tagList as $tagName )
-                            <span class="p-1 border border-main-blue rounded font-medium text-[10px] leading-4 text-main-blue ">
+                            <span class="p-1 border border-main-orange rounded font-medium text-[10px] leading-4 text-main-blue ">
                                 {{ $tagName }}
                             </span>
                         @endforeach

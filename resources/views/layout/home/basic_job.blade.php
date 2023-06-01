@@ -15,7 +15,7 @@
                     </figure>
                 </div>
                 <div class="job_detail">
-                    <p class="job-name-detail">{{ $job['job_name'] }}</p>
+                    <h3 class="job-name-detail">{{ $job['job_name'] }}</h3>
                     <h2>
                         <span class="text_excerpt">
                             <i class="icon-business-center-blue w-3.5 h-3.5"></i>
@@ -49,6 +49,7 @@
                 <i class="icon-chevron-right-blue w-6 h-6"></i>
             </a>
         </div>
+        <div class="container text-center">
     @endif
 @else
     <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>

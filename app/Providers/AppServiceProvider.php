@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Routing\UrlGenerator;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
 
         if (env('APP_ENV') !== 'local')
         {
-            $url->forceSchema('https');
+            URL::forceSchema('https');
         }
     }
 }

@@ -5,7 +5,7 @@
         @include('includes.element.meta')
 
         <title>Job-visa</title>
-
+        <link rel="icon" href="{{ url('image/logo2.png') }}">
         {{-- CSS --}}
         @include('includes.element.link')
         {{-- CSS For Screen --}}

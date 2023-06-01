@@ -11,4 +11,5 @@ return [
     'EM003' => "Thông tin :attribute đã được thay đổi. Hãy cập nhật thông tin mới nhất!",
     'EM004' => "Thông tin :attribute không tồn tại!",
     'EM005' => "Bạn đã ứng tuyển công việc này". "\n" . "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất",
+    'EM006' => "Gửi mail thất bại",
 ];

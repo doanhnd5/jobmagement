@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Candidates;
+use App\Models\JobWork;
 use Illuminate\Support\Facades\Validator;
 use App\Consts\ScreenConst;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Traits\LogTrait;
+use Mail;
+use App\Mail\SendMailApplySuccess;
 
 class ApplyController extends Controller
 {
+    use LogTrait;
+
     public function __construct(Request $request)
     {
         parent::__construct();
@@ -77,8 +83,11 @@ class ApplyController extends Controller
             // Begin transaction
             DB::beginTransaction();
             Candidates::insert($paramRegist);
+
             // Commit
             DB::commit();
+            // Send Email
+            $this->sendEmail($request);
             // Regist Success
             $data = [
                 'url'      => route('home'),
@@ -120,5 +129,41 @@ class ApplyController extends Controller
     {
         $candidatesList = Candidates::factory()->count(60)->create();
         return $candidatesList;
+    }
+
+    private function getMailData($request)
+    {
+        $jobData = JobWork::where('id', '=', $request->id)->first();
+        $genderName = "";
+        switch ($request->gender) {
+            case ScreenConst::GENDER_FEMALE:
+                $genderName = 'chị';
+                break;
+            case ScreenConst::GENDER_MALE:
+                break;
+                $genderName = 'anh';
+            default:
+                $genderName = 'anh/chị';
+                break;
+        }
+        // Send Email
+        $mailData = [
+            'candidates_name' => $request->first_name . ' ' . $request->last_name,
+            'job_name'        => $jobData->job_name,
+            'gender'          => $genderName,
+            'sender_name'     => \env('MAIL_SENDER_NAME'),
+        ];
+        return $mailData;
+    }
+
+    private function sendEmail($request)
+    {
+        try {
+            $mailData = $this->getMailData($request);
+            Mail::to($request->email)->send(new SendMailApplySuccess($mailData));
+        } catch (\Exception $ex) {
+            logger($ex);
+            $this->errorLog('E0001', 'Gửi email');
+        }
     }
 }

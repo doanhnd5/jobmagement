@@ -55,7 +55,7 @@ trait LogTrait
     private function getUserIdLog()
     {
         $userId = "";
-        $userId = SessionManager::getLoginSystemUserCode();
+        $userId = SessionManager::getLoginSystemUserId();
         return $userId;
     }
 

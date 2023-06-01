@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -36,5 +37,10 @@ class AppServiceProvider extends ServiceProvider
                 ]
             );
         });
+
+        if (env('APP_ENV') !== 'local')
+        {
+            URL::forceSchema('https');
+        }
     }
 }

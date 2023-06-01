@@ -46,7 +46,7 @@ class ApplyController extends Controller
         $validationRules = [
             'first_name'         => ['bail', 'required', 'max_utf8:255'],
             'last_name'          => ['bail', 'required', 'max_utf8:255'],
-            'email'              => ['bail', 'required', 'max_utf8:255'],
+            'email'              => ['bail', 'required', 'email', 'max_utf8:255'],
             'gender'             => ['bail', 'required', 'max_utf8:255'],
             'phone_number'       => ['bail', 'required', 'max_utf8:255'],
             'residence'          => ['bail', 'required', 'max_utf8:255'],
@@ -162,7 +162,6 @@ class ApplyController extends Controller
             $mailData = $this->getMailData($request);
             Mail::to($request->email)->send(new SendMailApplySuccess($mailData));
         } catch (\Exception $ex) {
-            logger($ex);
             $this->errorLog('E0001', 'Gửi email');
         }
     }

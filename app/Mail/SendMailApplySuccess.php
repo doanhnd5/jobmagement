@@ -25,26 +25,15 @@ class SendMailApplySuccess extends Mailable
         $this->mailData = $mailData;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
-    public function build()
-    {
-        logger($this->mailData);
-        $subject = self::MAIL_SUBJECT . $this->mailData['job_name'] . self::SUCCESS_MESSAGE;
-        return $this->subject($subject)
-                    ->view('mail.index', ['mailData' => $this->mailData]);
-    }
 
     /**
      * Get the message envelope.
      */
     public function envelope(): Envelope
     {
+        $subject = self::MAIL_SUBJECT . $this->mailData['job_name'] . self::SUCCESS_MESSAGE;
         return new Envelope(
-            subject: 'Send Mail Apply Success',
+            subject: $subject ,
         );
     }
 
@@ -55,6 +44,12 @@ class SendMailApplySuccess extends Mailable
     {
         return new Content(
             view: 'mail.index',
+            with: [
+                'genderContext'  => ' ' . $this->mailData['gender'],
+                'jobName'        => $this->mailData['job_name'],
+                'candidatesName' => $this->mailData['candidates_name'],
+                'senderName'     => $this->mailData['sender_name'],
+            ],
         );
     }
 

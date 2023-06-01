@@ -19,5 +19,5 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/workjob.js') }}"></script>
+    <script src="{{ asset('js/workJob.js') }}"></script>
 @endsection

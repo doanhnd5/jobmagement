@@ -6,8 +6,9 @@
             <img src="{{ asset('image/banner.jpg') }}" class="w-full h-full object-cover">
             <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
                 <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Job - Visa<br
-                        class="lg:hidden">Japan</p>
+                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Job - Visa</p>
+                    <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
+                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Japan</p>
                 <div class="searchBox w-full max-w-[972px] h-auto p-2.5 rounded-lg lg:p-8 mx-auto">
                     <form method="get" id="searchform" action="#" class="flex gap-2 flex-wrap">
                         <input type="hidden" name="size" value="200">

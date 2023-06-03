@@ -869,7 +869,6 @@ info {
     display: none;
 }
 
-
   @media (hover: hover) {
     wee-slider .wee-slider__buttons button:hover {
       scale: 1.1;
@@ -906,7 +905,7 @@ info {
     color: #666;
     font-size: 14px;
   }
-  
+
   .footer-inner {
     display: flex;
     align-items: center;
@@ -914,34 +913,34 @@ info {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .footer-logo img {
     max-width: 100px;
   }
-  
+
   .footer-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
   }
-  
+
   .footer-links li {
     margin-right: 20px;
   }
-  
+
   .footer-links a {
     color: #666;
     text-decoration: none;
   }
-  
+
   .footer-social a {
     margin-right: 10px;
     color: #666;
     text-decoration: none;
     font-size: 18px;
   }
-  
+
   .footer-bottom {
     margin-top: 20px;
     text-align: center;
@@ -957,7 +956,7 @@ info {
 
   .footer-inner {
       text-align: center; /* Center all content */
-      
+
   }
 
   .footer-logo {

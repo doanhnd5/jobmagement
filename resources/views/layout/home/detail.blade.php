@@ -24,7 +24,7 @@
                     </div>
                     <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Mức lương</div>
                     <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
-                        {{ $jobWork['salary'] . '円' }}
+                        {{ App\Libs\SystemUtil::formatNumber($jobWork['salary']) . '円' }}
                     </div>
                 </div>
                 <div class="list_tag flex flex-wrap gap-[8px] mt-[8px]">
@@ -81,7 +81,7 @@
                         </div>
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1">Lương cơ bản</div>
                         <div class="font-light text-sm leading-[21px] tracking-[.04em text-5] pl-2 mb-[10px]">
-                            {{ $jobWork['salary'] . '円' }}
+                            {{ App\Libs\SystemUtil::formatNumber($jobWork['salary']) . '円' }}
                         </div>
                         @php
                             $workTimeFrom = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_from']);

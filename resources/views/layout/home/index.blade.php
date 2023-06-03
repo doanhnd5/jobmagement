@@ -144,7 +144,7 @@
                                                     <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
                                                 </li>
                                                 <li class="item-text pl-1 self-center truncate">
-                                                    <span class="inline-block">{{ $job->salary . '円' }}</span>
+                                                    <span class="inline-block">{{ App\Libs\SystemUtil::formatNumber($job['salary']) . '円' }}</span>
                                                 </li>
                                             </ul>
                                         </div>

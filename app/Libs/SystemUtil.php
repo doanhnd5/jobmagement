@@ -25,4 +25,12 @@ class SystemUtil
         }
         return $workTime;
     }
+
+    public static function formatNumber($number)
+    {
+        if (isset($number)) {
+            $number = number_format($number);
+        }
+        return $number;
+    }
 }

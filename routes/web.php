@@ -14,11 +14,11 @@ use App\Libs\SessionManager;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('clear_session');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/detail/{id?}', [App\Http\Controllers\HomeController::class, 'getDetailJob'])->name('detail')->middleware('clear_session');
-Route::post('/home/search', [App\Http\Controllers\HomeController::class, 'search'])->name('home.search')->middleware('clear_session');
-Route::get('/job/list/{id?}', [App\Http\Controllers\HomeController::class, 'getJobList'])->name('get_job_list')->middleware('clear_session');
+Route::get('/detail/{id?}', [App\Http\Controllers\HomeController::class, 'getDetailJob'])->name('detail');
+Route::post('/home/search', [App\Http\Controllers\HomeController::class, 'search'])->name('home.search');
+Route::get('/job/list/{id?}', [App\Http\Controllers\HomeController::class, 'getJobList'])->name('get_job_list');
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'login'])->name('login.login');
 
@@ -34,8 +34,8 @@ Route::post('/search', [App\Http\Controllers\JobListController::class, 'search']
 Route::get('/create/{id?}', [App\Http\Controllers\CreateJobWorkController::class, 'index'])->name('create.index')->middleware('auth_user');
 Route::post('/regist', [App\Http\Controllers\CreateJobWorkController::class, 'regist'])->name('regist')->middleware('auth_user');
 
-Route::get('/apply/{id?}', [App\Http\Controllers\ApplyController::class, 'index'])->name('apply')->middleware('clear_session');
-Route::post('/apply', [App\Http\Controllers\ApplyController::class, 'apply'])->name('apply.create')->middleware('clear_session');
+Route::get('/apply/{id?}', [App\Http\Controllers\ApplyController::class, 'index'])->name('apply');
+Route::post('/apply', [App\Http\Controllers\ApplyController::class, 'apply'])->name('apply.create');
 
 
 

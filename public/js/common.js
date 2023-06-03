@@ -32,6 +32,12 @@ $(function() {
         $(this).val(hhMMIIList.join(':'));
     });
 
+    $('.inner a').on('click', function(e) {
+        openLoading();
+        e.preventDefault();
+        window.location.href = $(this).attr('href');
+    });
+
 });
 
 function openLoading() {

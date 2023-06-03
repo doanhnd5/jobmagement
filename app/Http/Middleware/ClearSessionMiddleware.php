@@ -9,10 +9,11 @@ use Session;
 
 class ClearSessionMiddleware
 {
-
     public function handle(Request $request, Closure $next)
     {
-        SessionManager::clearLoginSession();
+        if (!SessionManager::isLogin()) {
+            SessionManager::clearLoginSession();
+        }
         return $next($request);
     }
 }

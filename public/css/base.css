@@ -453,7 +453,6 @@
     background: url(../image/currency_yen_blue.svg) left/16px no-repeat;
     display: inline-block;
     background-size: contain;
-    background-position: center;
     background-repeat: no-repeat;
   }
   .recList dl .role {
@@ -732,7 +731,7 @@ info {
   wee-slider .wee-slider__slide {
     display: block;
     min-width: var(--wee-slide-width);
-    background: pink;
+    background: white;
     scroll-snap-align: var(--wee-slide-align);
     scroll-margin-left: 0;
     scroll-margin-right: 0;
@@ -800,12 +799,6 @@ info {
   }
 
   /* DEMO CSS */
-
-  wee-slider .wee-slider__slide {
-    height: auto;
-    background: none;
-    opacity: 1;
-  }
 
   wee-slider .slide-content {
     position: relative;

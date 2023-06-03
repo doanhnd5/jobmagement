@@ -109,7 +109,7 @@
                         <li class="wee-slider__slide">
                             <div class="slide-content">
                                 <a href="{{ route('detail', ['id' => $job['id']]) }}"
-                                    class="popularCard block px-1 slick-slide slick-current slick-active">
+                                    class="popularCard block slick-slide slick-current slick-active">
                                     <div class="popularCard_inner flex-col p-0 lg:bg-white">
                                         <div class="popularCard_inner_photo w-full mb-2 lg:mb-0">
                                             <figure class="aspect-[143/100] mb-2">
@@ -117,13 +117,13 @@
                                                     src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
                                                     width="100%" alt="">
                                             </figure>
-                                            <p class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2">
+                                            <p class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2 px-1">
                                                 {{ $job->company_name ?? '' }}</p>
-                                            <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate">
+                                            <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate px-1">
                                                 {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}</h3>
                                         </div>
                                         <div
-                                            class="popularCard_inner_info w-full font-light text-[11px] leading-5 text-333 lg:p-2">
+                                            class="popularCard_inner_info w-full font-light text-[11px] leading-5 text-333 lg:p-2 px-1">
                                             <ul class="popularCard_inner_place flex">
                                                 <li class="item w-3.5 flex items-center">
                                                     <i class="icon-location-on-fill-blue w-3.5 h-3.5"></i>

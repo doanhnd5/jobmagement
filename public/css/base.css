@@ -451,6 +451,10 @@
   }
   .icon-currency-yen-blue {
     background: url(../image/currency_yen_blue.svg) left/16px no-repeat;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .recList dl .role {
     background: url(../image/business_center_blue.svg) left/16px no-repeat;

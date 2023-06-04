@@ -85,7 +85,8 @@ class ApplyController extends Controller
             DB::beginTransaction();
             Candidates::insert($paramRegist);
             // Send Email
-            SendMailJob::dispatch($request->all());
+            $mailData = $this->getMailData($request->all());
+            SendMailJob::dispatch($mailData);
             // Commit
             DB::commit();
             // Regist Success
@@ -133,36 +134,27 @@ class ApplyController extends Controller
 
     private function getMailData($request)
     {
-        $jobData = JobWork::where('id', '=', $request->id)->first();
+        $jobData = JobWork::where('id', '=', $request['id'])->first();
         $genderName = "";
-        switch ($request->gender) {
+        switch ($request['gender']) {
             case ScreenConst::GENDER_FEMALE:
                 $genderName = 'chị';
                 break;
             case ScreenConst::GENDER_MALE:
-                break;
                 $genderName = 'anh';
+                break;
             default:
                 $genderName = 'anh/chị';
                 break;
         }
         // Send Email
         $mailData = [
-            'candidates_name' => $request->first_name . ' ' . $request->last_name,
+            'candidates_name' => $request['first_name'] . ' ' . $request['last_name'],
             'job_name'        => $jobData->job_name,
             'gender'          => $genderName,
+            'mail'            => $request['email'],
             'sender_name'     => \env('MAIL_SENDER_NAME'),
         ];
         return $mailData;
-    }
-
-    private function sendEmail($request)
-    {
-        try {
-            $mailData = $this->getMailData($request);
-            Mail::to($request->email)->send(new SendMailApplySuccess($mailData));
-        } catch (\Exception $ex) {
-            $this->errorLog('E0001', 'Gửi email');
-        }
     }
 }

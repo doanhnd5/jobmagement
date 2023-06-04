@@ -17,14 +17,16 @@
                     </div>
                     <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Hình thức</div>
                     <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
-                        {{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}
+                        @if (isset($jobWork['employment_type_id']))
+                            {{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}
+                        @endif
                     </div>
                     <div class="flex justify-center items-center mr-[3px]">
                         <i class="icon-currency-yen-blue w-4 h-4"></i>
                     </div>
                     <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Mức lương</div>
                     <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
-                        {{ App\Libs\SystemUtil::formatNumber($jobWork['salary']) . '円' }}
+                        {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary) . '円' }}
                     </div>
                 </div>
                 <div class="list_tag flex flex-wrap gap-[8px] mt-[8px]">
@@ -51,7 +53,7 @@
                         @php
                             $descriptionList = [];
                             if (isset($jobWork['description'])) {
-                                $descriptionList = explode("\n", $jobWork['description']);
+                                $descriptionList = explode("\n", $jobWork->description);
                             }
                         @endphp
                         <ol>
@@ -73,19 +75,23 @@
                     <div class="detail-information-table">
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1 md:mb-2.5">Công ty đăng tuyển</div>
                         <div class="font-light text-sm leading-[21px] tracking-[.04em text-5] pl-2 mb-[10px]">
-                            {{$jobWork['company_name'] ?? ''}}
+                            {{ $jobWork['company_name'] ?? ''}}
                         </div>
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1">Hình thức tuyển dụng</div>
                         <div class="font-light text-sm leading-[21px] tracking-[.04em text-5] pl-2 mb-[10px]">
-                            {{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}
+                            @if (isset($jobWork['employment_type_id']))
+                             {{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}
+                            @endif
                         </div>
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1">Lương cơ bản</div>
                         <div class="font-light text-sm leading-[21px] tracking-[.04em text-5] pl-2 mb-[10px]">
-                            {{ App\Libs\SystemUtil::formatNumber($jobWork['salary']) . '円' }}
+                            @if (isset($jobWork['salary']))
+                                {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary) . '円' }}
+                            @endif
                         </div>
                         @php
-                            $workTimeFrom = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_from']);
-                            $workTimeTo   = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_to']);
+                            $workTimeFrom = App\Libs\SystemUtil::getWorkTime($jobWork?->work_time_from);
+                            $workTimeTo   = App\Libs\SystemUtil::getWorkTime($jobWork?->work_time_to);
                             $workTime     = $workTimeFrom . ' ～ ' . $workTimeTo;
                         @endphp
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1">Thời gian làm việc</div>
@@ -97,7 +103,7 @@
             </div>
             <div class="job-work-detail-button mb-4 flex items-center justify-center gap-4 text-[8px] leading-[12px] md:text-sm text-white text-center">
                 <a href="{{ url()->previous() }}" class="inline-block bg-main-blue w-[120px] md:w-[200px] py-3 md:py-2 bg-[#F5CE0A] rounded">Quay lại</a>
-                <a href="{{ route('apply', ['id' => $jobWork['id']]) }}" class="inline-block bg-main-blue w-[120px] md:w-[200px] py-3 md:py-2 rounded">Ứng tuyển</a>
+                <a href="{{ route('apply', ['id' => $jobWork?->id]) }}" class="inline-block bg-main-blue w-[120px] md:w-[200px] py-3 md:py-2 rounded">Ứng tuyển</a>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@
         <style type="text/tailwindcss">
             @media (min-width: 300px) {
                 .pt-home {
-                    padding-top: 4rem;
+                    padding-top: 3rem;
                 }
             }
             @media (min-width: 475px) {

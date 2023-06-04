@@ -15,16 +15,11 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            closeLoading();
-          }
-    });
+    var myCustomEvent = (navigator.userAgent.match('iPhone') != null) ? 'popstate' : 'pageshow';
 
-    window.addEventListener('popstate', function(event) {
+    window.addEventListener(myCustomEvent, function(event) {
         closeLoading();
-    })
-
+    });
 
     $.ajaxSetup({
         headers: {

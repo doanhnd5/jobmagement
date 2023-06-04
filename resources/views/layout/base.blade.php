@@ -52,22 +52,12 @@
                 }
             }
         </style>
-        <script>
-            tailwind.config = {
-                theme: {
-                    screens: {
-                        'xs': '475px',
-                        'xm': '568px',
-                    }
-                }
-            }
-        </script>
     </head>
     <body>
         {{-- Header --}}
         @include('includes.header')
         {{-- Main --}}
-        <main id="main" >
+        <main id="main">
             <div id="spinerLoading" class="hidden flex justify-center items-center h-screen fixed top-0 left-0 right-0 bottom-0 w-full z-50 overflow-hidden bg-gray-700 opacity-75">
                 <div class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-8 h-64 w-64"></div>
             </div>

@@ -15,6 +15,10 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
+    window.onunload = function() {
+        closeLoading();
+    };
+
     closeLoading();
 
     $.ajaxSetup({

@@ -15,23 +15,40 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
+    const events = ["pagehide", "pageshow", "unload", "load"];
 
-    window.addEventListener('pageshow', function(event) {
-        closeLoading();
-    });
+    const eventLogger = (event) => {
+      switch (event.type) {
+        case "pagehide":
+        case "pageshow": {
+            closeLoading();
+          break;
+        }
+        default:
+            closeLoading();
+          break;
+      }
+    };
+
+    events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
+    addEventListener(eventName, eventLogger)
+
+    // window.addEventListener('pageshow', function(event) {
+    //     closeLoading();
+    // });
 
 
-    window.addEventListener("pagehide", function(event) {
-        closeLoading();
-    });
+    // window.addEventListener("pagehide", function(event) {
+    //     closeLoading();
+    // });
 
-    window.addEventListener("load", function() {
-        closeLoading();
-    }, false);
+    // window.addEventListener("load", function() {
+    //     closeLoading();
+    // }, false);
 
-    window.addEventListener("unload", function() {
-        closeLoading();
-    }, false);
+    // window.addEventListener("unload", function() {
+    //     closeLoading();
+    // }, false);
 
     $.ajaxSetup({
         headers: {

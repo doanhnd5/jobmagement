@@ -15,7 +15,7 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
-    $(window).bind("pageshow", function(event) {
+    window.addEventListener('pageshow', function() {
         closeLoading();
     });
 

@@ -18,6 +18,11 @@
         /*]]>*/</style>
 
         <style type="text/tailwindcss">
+            @media (min-width: 300px) {
+                .pt-home {
+                    padding-top: 5rem;
+                }
+            }
             @media (min-width: 475px) {
                 .pt-home {
                     padding-top: 3rem;

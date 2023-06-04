@@ -15,9 +15,10 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
-    window.addEventListener('pageshow', function() {
-        this.alert("test");
-        closeLoading();
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            closeLoading();
+          }
     });
 
     $.ajaxSetup({

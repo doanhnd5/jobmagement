@@ -15,9 +15,12 @@ const PROCESS_STATUS_ERROR   = 'error';
 
 $(function() {
 
-    var myCustomEvent = (navigator.userAgent.match('iPhone') != null) ? 'popstate' : 'pageshow';
 
-    window.addEventListener(myCustomEvent, function(event) {
+    window.addEventListener('pageshow', function(event) {
+        closeLoading();
+    });
+
+    window.addEventListener("pagehide", function(event) {
         closeLoading();
     });
 

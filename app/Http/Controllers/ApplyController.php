@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use App\Traits\LogTrait;
 use Mail;
 use App\Mail\SendMailApplySuccess;
+use App\Jobs\SendMailJob;
 
 class ApplyController extends Controller
 {
@@ -83,11 +84,10 @@ class ApplyController extends Controller
             // Begin transaction
             DB::beginTransaction();
             Candidates::insert($paramRegist);
-
+            // Send Email
+            SendMailJob::dispatch($request->all());
             // Commit
             DB::commit();
-            // Send Email
-            $this->sendEmail($request);
             // Regist Success
             $data = [
                 'url'      => route('home'),

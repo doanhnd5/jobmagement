@@ -13,25 +13,25 @@ const MESSAGE_DIALOG_TYPE_TITLEBAR_CLASS = {
 const PROCESS_STATUS_SUCCESS = 'success';
 const PROCESS_STATUS_ERROR   = 'error';
 
+const events = ["pagehide", "pageshow", "unload", "load"];
+
+const eventLogger = (event) => {
+  switch (event.type) {
+    case "pagehide":
+    case "pageshow": {
+        closeLoading();
+      break;
+    }
+    default:
+        closeLoading();
+      break;
+  }
+};
+
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
+
+
 $(function() {
-
-    const events = ["pagehide", "pageshow", "unload", "load"];
-
-    const eventLogger = (event) => {
-      switch (event.type) {
-        case "pagehide":
-        case "pageshow": {
-            closeLoading();
-          break;
-        }
-        default:
-            closeLoading();
-          break;
-      }
-    };
-
-    events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
-    addEventListener(eventName, eventLogger)
 
     // window.addEventListener('pageshow', function(event) {
     //     closeLoading();

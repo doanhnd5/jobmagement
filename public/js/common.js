@@ -20,13 +20,18 @@ $(function() {
         closeLoading();
     });
 
-    window.addEventListener('beforeunload', function(event) {
-        closeLoading();
-    });
 
     window.addEventListener("pagehide", function(event) {
         closeLoading();
     });
+
+    window.addEventListener("load", function() {
+        closeLoading();
+    }, false);
+
+    window.addEventListener("unload", function() {
+        closeLoading();
+    }, false);
 
     $.ajaxSetup({
         headers: {

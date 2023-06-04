@@ -20,6 +20,10 @@ $(function() {
         closeLoading();
     });
 
+    window.addEventListener('beforeunload', function(event) {
+        closeLoading();
+    });
+
     window.addEventListener("pagehide", function(event) {
         closeLoading();
     });

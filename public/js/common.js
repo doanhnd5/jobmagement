@@ -13,42 +13,15 @@ const MESSAGE_DIALOG_TYPE_TITLEBAR_CLASS = {
 const PROCESS_STATUS_SUCCESS = 'success';
 const PROCESS_STATUS_ERROR   = 'error';
 
-const events = ["pagehide", "pageshow", "unload", "load"];
-
-const eventLogger = (event) => {
-  switch (event.type) {
-    case "pagehide":
-    case "pageshow": {
-        closeLoading();
-      break;
-    }
-    default:
-        closeLoading();
-      break;
-  }
-};
-
-events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
-
-
 $(function() {
 
-    // window.addEventListener('pageshow', function(event) {
-    //     closeLoading();
-    // });
+    window.addEventListener('pageshow', function(event) {
+        closeLoading();
+    });
 
-
-    // window.addEventListener("pagehide", function(event) {
-    //     closeLoading();
-    // });
-
-    // window.addEventListener("load", function() {
-    //     closeLoading();
-    // }, false);
-
-    // window.addEventListener("unload", function() {
-    //     closeLoading();
-    // }, false);
+    window.addEventListener("pagehide", function(event) {
+        closeLoading();
+    });
 
     $.ajaxSetup({
         headers: {

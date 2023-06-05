@@ -38,6 +38,8 @@ class Candidates extends Model
             $query->where('candidates.phone_number', '=', $srchList['phone_number']);
         })->when(isset($srchList['email']), function($query) use ($srchList) {
             $query->where('candidates.email', '=', $srchList['email']);
+        })->when(isset($srchList['job_name']), function($query) use ($srchList) {
+            $query->where('job_work.job_name', '=', $srchList['job_name']);
         })->when(isset($srchList['contact_status']), function($query) use ($srchList) {
             $query->where('candidates.is_contacted', '=', $srchList['contact_status']);
         })

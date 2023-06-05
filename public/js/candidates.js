@@ -53,6 +53,7 @@ function search(url) {
     param['name']              = $('#txtName').val();
     param['phone_number']      = $('#txtPhoneNumber').val();
     param['email']             = $('#txtEmail').val();
+    param['job_name']          = $('#txtJobName').val();
     param['contact_status']    = $('#ddlContactStatus').val();
     $.ajax({
         url      : url,

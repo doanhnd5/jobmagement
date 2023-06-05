@@ -126,6 +126,7 @@ class CadidatesController extends Controller
         $this->srchList['name']           = $request->name;
         $this->srchList['phone_number']   = $request->phone_number;
         $this->srchList['email']          = $request->email;
+        $this->srchList['job_name']       = $request->job_name;
         $this->srchList['contact_status'] = $request->contact_status;
     }
 }

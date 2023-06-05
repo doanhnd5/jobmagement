@@ -55,7 +55,7 @@
 @else
     <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
     <div class="popular-see-more text-center md:mb-4">
-        Không có thông tin tuyển dụng liên quan đến từ khóa bạn đang tìm kiếm!
+        Không có thông tin tuyển dụng!
     </div>
 @endif
 

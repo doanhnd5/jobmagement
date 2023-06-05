@@ -2,7 +2,9 @@ $(function() {
     $(document).on('click', '.btn-confirm-contact', function() {
         const id  = $(this).data('id');
         const url = $(this).data('url');
+        const remark = $(this).closest('tr').find('input[class*="remark"]').val();
         confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
+            openLoading();
             const param = {};
             param['id'] = id;
             param['date_time_display'] = $('#txtDateDisplay').val();
@@ -10,6 +12,8 @@ $(function() {
             param['phone_number']      = $('#txtPhoneNumber').val();
             param['email']             = $('#txtEmail').val();
             param['contact_status']    = $('#ddlContactStatus').val();
+            param['contact_status']    = $('#ddlContactStatus').val();
+            param['remark']            = remark;
 
             $.ajax({
                 url      : url,
@@ -33,7 +37,9 @@ $(function() {
                 }
             }).fail(function (data) {
                 showMessageFail(data.status);
-            })
+            }).always(function(data) {
+                closeLoading();
+            });
         }).catch(function(e) {});
     });
 

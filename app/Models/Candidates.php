@@ -30,6 +30,7 @@ class Candidates extends Model
             'candidates.japanese_skill_id',
             'candidates.residence',
             'candidates.is_contacted',
+            'candidates.remark',
             DB::raw('DATE_FORMAT(candidates.apply_date, "%d/%m/%Y") as apply_date'),
             'job_work.job_name'
         )->when(isset($srchList['name']), function($query) use ($srchList) {

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('facebook_url')->comment('Facebook');
             $table->string('address')->comment('Địa chỉ');
             $table->boolean('is_contacted')->comment('Đã liên hệ / Chưa liên hệ');
+            $table->string('remark')->nullable()->comment('Đã liên hệ / Chưa liên hệ');
             $table->string('japanese_skill_id')->comment('Trình độ tiếng Nhật');
             $table->string('residence')->comment('Tư cách lưu trú');
             $table->timestamp('apply_date')->nullable()->comment('Thời gian ứng tuyển');

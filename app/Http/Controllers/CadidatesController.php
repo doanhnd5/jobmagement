@@ -51,6 +51,7 @@ class CadidatesController extends Controller
             }
             $paramUpdate = [];
             $paramUpdate['is_contacted'] = true;
+            $paramUpdate['remark'] = $request->remark;
             $this->setParamUpdateInfoCommon($paramUpdate);
             // Begin transaction
             DB::beginTransaction();

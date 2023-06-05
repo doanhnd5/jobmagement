@@ -1,14 +1,15 @@
 <table id="tblList" class="min-w-full">
     <colgroup>
-        <col style="width: 120px">
+        <col style="width: 300px">
         <col style="width: 80px">
-        <col style="width: 120px">
         <col style="width: 100px">
+        <col style="width: 80px">
         <col style="width: 150px">
         <col style="width: 120px">
         <col style="width: 120px">
         <col style="width: 100px">
-        <col style="width: 100px">
+        <col style="width: 400px">
+        <col style="width: calc(100% -20px)">
     </colgroup>
     <thead>
         <tr>
@@ -29,13 +30,16 @@
                 Địa chỉ</th>
             <th
                 class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
-                Job ứng tuyển</th>
+                Tên job</th>
             <th
                 class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Ngày ứng tuyển</th>
             <th
                 class="px-6 py-3 text-xs font-medium leading-4 tracking-wider  uppercase border-b border-gray-200">
                 Trạng thái</th>
+            <th
+                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
+                Ghi chú</th>
             <th
                 class="px-6 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b border-gray-200">
                 Xác nhận</th>
@@ -71,6 +75,10 @@
                     @else
                         Chưa liên hệ
                     @endif
+                </td>
+                <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
+                    <input class="remark shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text" value="{{ $candidatesData['remark'] }}">
                 </td>
                 <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
                     @if (!$candidatesData['is_contacted'])

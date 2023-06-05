@@ -36,7 +36,7 @@
                         Tên Job
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="txtJobName" type="text">
+                        id="txtJobName" type="text">
                 </div>
                 <div class="px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">

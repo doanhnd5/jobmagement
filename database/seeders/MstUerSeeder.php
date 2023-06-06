@@ -15,9 +15,9 @@ class MstUerSeeder extends Seeder
         //
         \DB::table('mst_user')->insert([
             [
-                'name' => 'doanhd',
-                'email' => 'doanhnd@gmail.com',
-                'password' => '12345678',
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => 'password',
             ],
         ]);
     }

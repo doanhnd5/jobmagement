@@ -3,9 +3,8 @@
 @endphp
 
 <header id="header">
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500" >
-        <div class="inner bg-white w-full flex fixed top-0 z-100">
-            <div class="header__logo self-center">
+    <nav class="flex items-center justify-between" >
+        <div class="header__logo self-center">
                 <h1 class="ml-2">
                     <a href="{{ route('home') }}">
                         <div class="text-black font-bold">
@@ -14,15 +13,37 @@
                     </a>
                 </h1>
             </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><button" class="close-btn" id="close-btn">&times;</button></li>
+            <li><a href="/" class="block mt-4 lg:inline-block nav-tab">Home</a></li>
+            <li><a href="{{ route('get_job_list') }}" class="block mt-4 lg:inline-block nav-tab">Tuyển dụng</a></li>
+            <!--
+            <li><a href="/" class="block mt-4 lg:inline-block nav-tab">Visa</a></li>
+-->
+            <li><a href="/about" class="block mt-4 lg:inline-block nav-tab">Giới thiệu</a></li>
+            <li>
+            </li>
             @if ($isLogin)
-                <a href="{{ route('candidates') }}" class="block mt-4 lg:inline-block nav-tab">
-                    応募履歴
-                </a>
-                <a href="{{ route('job_list') }}" class="block mt-4 lg:inline-block nav-tab">
-                    求人情報一覧
-                </a>
+            <li>
+            <a href="{{ route('candidates') }}" class="block mt-4 lg:inline-block nav-tab">
+                応募履歴
+            </a>
+            </li>
+            <li><a href="{{ route('job_list') }}" class="block mt-4 lg:inline-block nav-tab">
+                求人情報一覧
+            </a></li>
             @endif
-            <div id='google_translate_element'></div>
-        </div>
+        </ul>
+        <div id='google_translate_element'></div>
     </nav>
 </header>
+<script>
+    document.getElementById('close-btn').addEventListener('click', function(){
+    document.getElementById('check').checked = false;
+});
+
+</script>

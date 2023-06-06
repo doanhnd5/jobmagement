@@ -6,9 +6,12 @@
             <img src="{{ asset('image/banner.jpg') }}" class="w-full h-full object-cover">
             <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
                 <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Job - Visa</p>
+                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                <span class="notranslate">Job - Visa</span>
+                </p>
                     <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Japan</p>
+                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                    <span class="notranslate">Japan</span></p>
                 <div class="searchBox w-full max-w-[972px] h-auto p-2.5 rounded-lg lg:p-8 mx-auto">
                     <form method="get" id="searchform" action="#" class="flex gap-2 flex-wrap">
                         <input type="hidden" name="size" value="200">
@@ -65,7 +68,7 @@
                                             class="icon-temp-preferences-custom-fill-blue w-4.5 h-4.5 absolute top-1/2 -translate-y-1/2 left-0.5 md:left-2"></i>
                                         <select name="tags[]" id="ddlTag"
                                             class="w-full h-[46px] px-5.5 md:px-[28px] font-body">
-                                            <option value="">Tag</option>
+                                            <option value="" class="notranslate">Tag</option>
                                             @foreach ($tagList as $tagKey => $tagName)
                                                 @if ($tagKey == $srchTag)
                                                     <option value="{{ $tagKey }}" selected>{{ $tagName }}</option>
@@ -98,8 +101,7 @@
         <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
             <div class="sectionTitle text-center">
                 <h2 class="font-serif font-medium text-base md:text-xl text-center text-white text-4E4A40 my-2.5">
-                    <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Thông tin tuyển dụng<br
-                            class="md:hidden"> đang hot</span>
+                    <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc được nhiều người ứng tuyển</span>
                 </h2>
             </div>
             <wee-slider data-loop="true" data-align="center" data-buttons-on-hover="true">

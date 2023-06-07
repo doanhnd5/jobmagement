@@ -12,7 +12,7 @@
         <div class="about-content">
         <div class="wpb_wrapper">
                 <h2><strong>Lời chào</strong></h2>
-                <p>Công ty chúng tôi bắt đầu là một trường dạy tiếng Nhật ở Tân Giang, Việt Nam vào năm 2011.</p>
+                <p>Công ty chúng tôi bắt đầu là một trường dạy tiếng Nhật ở Thanh Giang, Việt Nam vào năm 2011.</p>
                 <p>Năm 2020, chúng tôi bắt đầu cung cấp dịch vụ SIM và dịch vụ nhân sự cho người toàn cầu, đồng thời cung cấp dịch vụ tuyển dụng và tư vấn cho người nước ngoài.</p>
                 <p>Ngoài ra, hợp tác với một công ty tập đoàn địa phương, chúng tôi đã bắt đầu dịch vụ tư vấn giới thiệu với tư cách là tổ chức phái cử nhân lực tay nghề cao, kỹ năng đặc thù 1 và thực tập sinh kỹ năng.</p>
                 <p>Dịch vụ nhân sự nhằm giải quyết và tìm hiểu cụ thể các vấn đề liên quan đến tuyển dụng mà khách hàng gặp phải.</p>
@@ -28,7 +28,7 @@
                 <p><b>Nguyễn Trọng Dũng</b></p>
                 <p>[Sự nghiệp]</p>
                 <p>2003 Vào Đại học Quốc gia Hà Nội</p>
-                <p>2011 Thành lập công ty mẹ Công ty TNHH Du học Tanzan tại Việt Nam</p>
+                <p>2011 Thành lập công ty mẹ Công ty TNHH Du học Thanh Giang tại Việt Nam</p>
                 <p>2009 Đến Nhật Bản với tư cách là sinh viên trao đổi</p>
                 <p>2013 Nhập học Khoa Quản trị Kinh doanh, Đại học Kinh tế Nhật Bản</p>
                 <p>2017 Quản lý và điều hành nhân sự tại M&amp;R Co., Ltd.</p>
@@ -48,7 +48,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-left">Tên công ty</td>
-                                <td class="text-left">Công ty TNHH <span class="notranslate"> SEIKOU</span></td>
+                                <td class="text-left">Công ty TNHH <span class="notranslate"> SEIKOU T&T</span></td>
                             </tr>
                             <tr>
                                 <td class="text-left">Thành lập</td>
@@ -61,20 +61,17 @@
                             <tr>
                                 <td class="text-left">Nội dung kinh doanh</td>
                                 <td class="text-left">
-                                    Kinh doanh đại lý liên quan <br>
-                                    kết nối đường truyền Internet, tuyển dụng đường truyền Internetđến thủ tục đăng ký bán thẻ SIM, bán điện thoại di động, dịch vụ viễn thông, dịch vụ phát sóng, v.v. Môi giới 
-                                    tại Việt Nam 
-                                    Dịch vụ 
-                                    xin thị 
-                                    thực kinh doanh<br><br><br><br><br></td>
+                                <li>Giới thiệu việc làm : Nhân viên chính thức - part time - Tokuteigino</li>
+                                    <li>Dịch vụ viễn thông, phát sóng : cung cấp sim nghe gọi, data, wifi cầm tay, sim du lịch,...</li>
+                                    <li>Bán thiết bị di động</li>
                             </tr>
                             <tr>
                                 <td class="text-left">Số lượng nhân viên</td>
-                                <td class="text-left">9 người (4 nhân viên, 5 bán thời gian)</td>
+                                <td class="text-left">11 người (6 nhân viên, 5 bán thời gian)</td>
                             </tr>
                             <tr>
                                 <td class="text-left">số lượng bán</td>
-                                <td class="text-left">25 triệu yên (thời hạn Reiwa 3 năm 3 tháng)</td>
+                                <td class="text-left">208 triệu yên (Kì 3 năm 2023)</td>
                             </tr>
                             <tr>
                                 <td class="text-left">yêu cầu ngân hàng</td>
@@ -97,8 +94,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-left">ĐIỆN THOẠI / FAX</td>
-                                <td class="text-left">Điện thoại: 03-6313-4267 <br>
+                                <td class="text-left">Tel / FAX</td>
+                                <td class="text-left">TEL: 03-6313-4267 <br>
                                     Hotline: 080-3185-3426 <br>
                                     Email: <a href="mailto:thanhgiangseikou@gmail.com">thanhgiangseikou@gmail.com</a> 
                                     &nbsp;– Website: seikou-tt.jp</td>

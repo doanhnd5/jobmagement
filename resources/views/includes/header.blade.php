@@ -40,7 +40,7 @@
                     ビザ情報
                 </a></li>
             @endif
-            <li  style="padding-left: 20px;">
+            <li  style="padding-left: 50px;">
                 <div id='google_translate_element'></div>
         </li>
         </ul>

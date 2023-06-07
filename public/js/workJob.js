@@ -39,6 +39,8 @@ $(function() {
             } else {
                 alertExPromiseError(data.alertMsg).then(function() {
                     if (data.url) {
+                        // Loading
+                        openLoading();
                         window.location.href = data.url;
                     }
                 });

@@ -40,6 +40,8 @@ $(function() {
             }).done(function (data) {
                 if (data.status == PROCESS_STATUS_SUCCESS) {
                     alertExPromiseSuccess(data.alertMsg).then(function(){
+                        // Loading
+                         openLoading();
                         window.location.href = data.url;
                     });
                 } else if (data.status == PROCESS_STATUS_ERROR) {

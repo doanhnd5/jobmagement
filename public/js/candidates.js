@@ -22,7 +22,7 @@ $(function() {
                 dataType : 'json'
             }).done(function (data) {
                 if (data.status == PROCESS_STATUS_SUCCESS) {
-                    alertExPromiseSuccess(data.alertMsg).then(function(){
+                    alertExPromiseSuccess(data.alertMsg).then(function() {
                         $('#divTableList').html(data.htmCandidatesArea);
                     });
                 } else if (data.status == PROCESS_STATUS_ERROR) {

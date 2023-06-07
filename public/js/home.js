@@ -46,6 +46,8 @@ function search(url) {
             $('#divWorkBasic ul').html(data.htmlJobWorkBasicArea);
         } else if (data.status == PROCESS_STATUS_ERROR) {
             alertExPromiseError(data.alertMsg).then(() => {
+                // Loading
+                openLoading();
                 window.location.href = data.url;
             });
         } else {

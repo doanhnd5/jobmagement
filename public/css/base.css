@@ -988,7 +988,7 @@ info {
   }
   @media only screen and (max-width: 500px) {
       .footer .col {
-        width: 50%;
+        width: 100%;
       }
       .footer .col h1 {
         font-size: 14px;

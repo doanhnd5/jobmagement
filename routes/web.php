@@ -35,6 +35,13 @@ Route::post('/search', [App\Http\Controllers\JobListController::class, 'search']
 Route::get('/create/{id?}', [App\Http\Controllers\CreateJobWorkController::class, 'index'])->name('create.index')->middleware('auth_user');
 Route::post('/regist', [App\Http\Controllers\CreateJobWorkController::class, 'regist'])->name('regist')->middleware('auth_user');
 
+Route::get('/post', [App\Http\Controllers\PostListController::class, 'index'])->name('post_list')->middleware('auth_user');
+Route::post('/post/delete', [App\Http\Controllers\PostListController::class, 'delete'])->name('post.delete')->middleware('auth_user');
+Route::post('/post/search', [App\Http\Controllers\PostListController::class, 'search'])->name('post.search')->middleware('auth_user');
+Route::get('/post/create/{id?}', [App\Http\Controllers\CreatePostController::class, 'index'])->name('post.create')->middleware('auth_user');
+Route::post('/post/regist', [App\Http\Controllers\CreatePostController::class, 'regist'])->name('post.regist')->middleware('auth_user');
+Route::post('/post/publish', [App\Http\Controllers\PostListController::class, 'publish'])->name('post.publish')->middleware('auth_user');
+
 Route::get('/apply/{id?}', [App\Http\Controllers\ApplyController::class, 'index'])->name('apply');
 Route::post('/apply', [App\Http\Controllers\ApplyController::class, 'apply'])->name('apply.create');
 

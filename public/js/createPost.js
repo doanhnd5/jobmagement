@@ -6,8 +6,7 @@ let urlParamIndex = {
 $(function() {
 
     let urlParamSearchKeyList = [
-        'srchJobArea',
-        'srchEmploymentType',
+        'srchPostTitle'
     ];
 
     urlParamSearchKeyList.forEach(value => {
@@ -67,34 +66,17 @@ $(function() {
 
 function getRegistParam() {
     const param = {};
-    param['id']                   = $('#txtJobId').val();
-    param['date_time_display']    = $('#txtDatetimeDisplay').val();
-    param['job_name']             = $('#txtJobName').val();
-    param['employment_type_id']   = $('#ddlEmployeeType').val();
-    param['workplace_prefecture'] = $('#ddlJobArea').val();
-    param['tag']                  = $('input[name="chkTag"]:checked').map((index, item) => { return $(item).val() }).get();
-    param['workplace_city']       = $('#txtWorkPlaceCity').val();
-    param['work_time_from']       = getTimeParam('#txtWorkTimeFrom');
-    param['work_time_to']         = getTimeParam('#txtWorkTimeTo');
-    param['salary']               = $('#txtSalary').val();
-    param['description']          = $('#txtDescription').val();
-    param['company_name']         = $('#txtCompany').val();
-    param['is_important']         = $('input[name="rdoJobImportant"]:checked').val();
+    param['id']                = $('#txtPostId').val();
+    param['date_time_display'] = $('#txtDatetimeDisplay').val();
+    param['post_title']        = $('#txtPostTitle').val();
+    param['post_content']      = $('#txtPostContent').val();
     return param;
 }
 
 function setErrorMsgListRegist(errMstList) {
     const className = 'mb-6';
-    setErrorMsg(errMstList['job_name'], '#txtJobName', className);
-    setErrorMsg(errMstList['employment_type_id'], '#ddlEmployeeType', className);
-    setErrorMsg(errMstList['workplace_city'], '#txtWorkPlaceCity', className);
-    setErrorMsg(errMstList['workplace_prefecture'], '#ddlJobArea', className);
-    setErrorMsg(errMstList['company_name'], '#txtCompany', className);
-    setErrorMsg(errMstList['tag'], '#ddlTag', className);
-    setErrorMsg(errMstList['salary'], '#txtSalary', className);
-    setErrorMsg(errMstList['work_time_from'], '#txtWorkTimeFrom', className);
-    setErrorMsg(errMstList['work_time_to'], '#txtWorkTimeFrom', className);
-    setErrorMsg(errMstList['description'], '#txtDescription', className);
+    setErrorMsg(errMstList['post_title'], '#txtPostTitle', className);
+    setErrorMsg(errMstList['post_content'], '#txtPostContent', className);
 }
 
 function addUrlParamToBackPageLnk(pUrl) {

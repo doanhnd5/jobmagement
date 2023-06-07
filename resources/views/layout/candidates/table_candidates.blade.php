@@ -82,10 +82,10 @@
                 </td>
                 <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
                     @if (!$candidatesData['is_contacted'])
-                    <button class="btn-confirm-contact bg-blue-500 hover:bg-blue-700 text-white font-bold border border-blue-700 rounded"
-                    data-cfm-msg="{{ __('messages.I0003') }}"
-                    data-url="{{ route('confirm') }}"
-                    data-id="{{ $candidatesData['id'] }}">
+                    <button class="btn-confirm-contact bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                        data-cfm-msg="{{ __('messages.I0003') }}"
+                        data-url="{{ route('confirm') }}"
+                        data-id="{{ $candidatesData['id'] }}">
                         Xác nhận
                     </button>
                     @endif
@@ -94,7 +94,7 @@
         @endforeach
     </tbody>
 </table>
-<div class="inline-block min-w-full pagination">
+<div class="inline-block pagination">
     {{ $candidatesList->appends(request()->input())->links() }}
 </div>
 

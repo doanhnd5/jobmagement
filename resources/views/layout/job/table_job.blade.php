@@ -80,6 +80,6 @@
         @endforeach
     </tbody>
 </table>
-<div class="inline-block min-w-full pagination">
+<div class="inline-block pagination">
     {{ $jobWorkList->appends(request()->input())->links() }}
 </div>

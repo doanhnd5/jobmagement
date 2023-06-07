@@ -534,6 +534,7 @@
   .pagination {
     float: right;
     margin-top: 5px;
+    margin-right: 5px;
   }
 
   .pagination p {
@@ -872,6 +873,11 @@ info {
     display: none;
 }
 
+#tblList .detail,
+#tblList .btn-delete {
+    text-align: -webkit-center;
+}
+
   @media (hover: hover) {
     wee-slider .wee-slider__buttons button:hover {
       scale: 1.1;
@@ -950,7 +956,7 @@ info {
     display: inline-block;
     padding-right: 5px !important;
   }
-  
+
   .footer .col ul li:hover {
     color: #ffffff;
     transition: .1s;
@@ -1074,16 +1080,16 @@ info {
     .container {
       padding: 10px;
     }
-  
+
     .about {
       flex-direction: column;
     }
-  
+
     .about-image {
       margin-right: 0;
       margin-bottom: 20px;
     }
-  
+
     .about-content {
       margin-top: 0;
     }
@@ -1094,7 +1100,7 @@ info {
   table {
     border-collapse: collapse;
   }
-  
+
   table, th, td {
     border: 1px solid black;
     padding: 5px;
@@ -1103,7 +1109,7 @@ info {
     pointer-events: none;
     user-select: none;
   }
-  
+
 /* Main navigation */
 
 nav {
@@ -1284,13 +1290,13 @@ a:hover {
       margin-top: 0.4em;
       margin-bottom: 0.4em;
   }
-  
+
   .stat-box h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 100;
       font-size: 2.6em;
   }
-  
+
   .stat-box h3 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 200;

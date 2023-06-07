@@ -28,14 +28,17 @@
             <li>
             </li>
             @if ($isLogin)
-            <li>
-            <a href="{{ route('candidates') }}" class="block mt-4 lg:inline-block nav-tab">
-                応募履歴
-            </a>
-            </li>
-            <li><a href="{{ route('job_list') }}" class="block mt-4 lg:inline-block nav-tab">
-                求人情報一覧
-            </a></li>
+                <li>
+                <a href="{{ route('candidates') }}" class="block mt-4 lg:inline-block nav-tab">
+                    応募履歴
+                </a>
+                </li>
+                <li><a href="{{ route('job_list') }}" class="block mt-4 lg:inline-block nav-tab">
+                    求人情報一覧
+                </a></li>
+                <li><a href="{{ route('post_list') }}" class="block mt-4 lg:inline-block nav-tab">
+                    ビザ情報
+                </a></li>
             @endif
         </ul>
         <div id='google_translate_element'></div>

@@ -202,5 +202,7 @@ return [
         'facebook_url'  => 'Facebook',
         'address'  => 'Địa chỉ',
         'date_of_birth'  => 'Ngày tháng năm sinh',
+        'post_title'  => 'Tiêu đề',
+        'post_content'  => 'Nội dung',
     ],
 ];

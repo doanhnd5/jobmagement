@@ -7,7 +7,7 @@ $(function() {
 
     setUrlParamIndexSearchList();
 
-    $(document).on('click', '#btnCreateJob', function() {
+    $(document).on('click', '#btnCreatePost', function() {
         // Loading
         openLoading();
         const url = $(this).data('url');
@@ -52,13 +52,13 @@ $(function() {
 
     $(document).on('click', '.btn-delete', function(e) {
         e.preventDefault();
-        const jobId = $(this).data('id');
+        const postId = $(this).data('id');
         const url   = $(this).attr('href');
         confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
             // Loading
             openLoading();
             const param = {};
-            param['id'] = jobId;
+            param['id'] = postId;
             $.ajax({
                 url      : url,
                 type     : 'POST',
@@ -81,6 +81,37 @@ $(function() {
             });
         }).catch(function(e) {});
     });
+
+    $(document).on('click', '.btn-publish', function() {
+        const id  = $(this).data('id');
+        const url = $(this).data('url');
+        confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
+            openLoading();
+            const param = {};
+            param['id'] = id;
+            param['date_time_display'] = $('#txtDateDisplay').val();
+            param['post_title']        = $('#txtPostTitle').val();
+
+            $.ajax({
+                url      : url,
+                type     : 'POST',
+                data     : param,
+                dataType : 'json'
+            }).done(function (data) {
+                if (data.status == PROCESS_STATUS_SUCCESS) {
+                    alertExPromiseSuccess(data.alertMsg).then(function(){
+                        $('#divTableList').html(data.htmlTableArea);
+                    });
+                } else if (data.status == PROCESS_STATUS_ERROR) {
+                    alertExPromiseError(data.alertMsg);
+                }
+            }).fail(function (data) {
+                showMessageFail(data.status);
+            }).always(function(data) {
+                closeLoading();
+            });
+        }).catch(function(e) {});
+    });
 });
 
 function transitionScreenListToDetail(pUrl) {
@@ -90,8 +121,7 @@ function transitionScreenListToDetail(pUrl) {
 
 function getAddParamSearchList() {
     let reqData = {};
-    reqData['srchJobArea']        = $('#srchJobArea').val();
-    reqData['srchEmploymentType'] = $('#srchEmploymentType').val();
+    reqData['srchPostTitle'] = $('#txtPostTitle').val();
     return reqData;
 }
 

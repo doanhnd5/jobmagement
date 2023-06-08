@@ -180,7 +180,7 @@
         <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFDD">
             <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
                 <ul class="hot_job">
-                    {!! $htmlJobWorkBasicArea !!}
+                    {!! $htmlRecentJobListHtmlArea !!}
                 </ul>
             </div>
         </div>
@@ -188,18 +188,25 @@
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="text-center">
         <h2 class="font-serif font-medium text-base md:text-xl text-center text-FFA500 my-2.5">
-            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Có thể bạn quan tâm</span>
+            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc đựợc ứng tuyển nhiều nhất</span>
         </h2>
+        <div class="recent-job-list">
+        <div class="recent-job-list">
 
+</div>
+
+    </div>
         </div>
         <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFDD">
             <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
                 <ul class="hot_job">
-                    {!! $htmlJobWorkBasicArea !!}
+                    {!! $htmlTopJobsWithMostCandidatesHtmlArea !!}
                 </ul>
             </div>
         </div>
     </section>
+
+    
 @stop
 
 @section('js')

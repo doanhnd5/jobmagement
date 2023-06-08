@@ -58,7 +58,9 @@
                         @endphp
                         <ol>
                             @foreach ($descriptionList as $description)
-                                <li class="description">{{ $description }}</li>
+                                @if (!empty($description))
+                                    <li class="description">{{ $description }}</li>
+                                @endif
                             @endforeach
                         </ol>
                     </div>

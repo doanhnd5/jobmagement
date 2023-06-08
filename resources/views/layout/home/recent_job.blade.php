@@ -1,6 +1,6 @@
 <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
     <ul class="hot_job">
-        @foreach ($jobWorkBasicList as $job)
+        @foreach ($recentJobList as $job)
         <li id="job-{{ $job['id'] }}"
             class="post-1119062 item type-item status-publish has-post-thumbnail hentry employ-haken picky-shufu-kangei picky-tomodachiobo picky-wwork-ok picky-freeter-kangei picky-mikeikensha picky-kotsuhi picky-shakaihoken picky-kenshuseido picky-shift-sei picky-senior-kangei picky-rirekisyofuyou picky-532 genre-souzai-sushi area-606 area-kyouto-fu rating-97 rating-98 rating-99 is-recommend rate-rating-gold">
             <a  href="{{ route('detail', ['id' => $job['id']]) }}">
@@ -43,8 +43,8 @@
 
 
 
-@if ($jobWorkBasicList->count() != 0)
-    @if ($jobWorkBasicList->count() >= 1)
+@if ($recentJobList->count() != 0)
+    @if ($recentJobList->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
         <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
         <div class="popular-see-more text-center md:mb-4">
             <a href="{{ route('get_job_list') }}" class="see-more-btn inline-flex items-center">

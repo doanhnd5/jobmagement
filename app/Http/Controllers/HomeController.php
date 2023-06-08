@@ -27,6 +27,9 @@ class HomeController extends Controller
         $param['tagList']              = Tag::all()->pluck('name', 'id');
         $param['jobWorkHotList']       = $this->getHtmlHotJobList();
         $param['htmlJobWorkBasicArea'] = $this->getJobWorkBasicHtmlArea();
+        $param['htmlRecentJobListHtmlArea']    =$this->getHtmlRecentJobListHtmlArea();
+        $param['htmlTopJobsWithMostCandidatesHtmlArea']    =$this->getHtmlTopJobsWithMostCandidatesHtmlArea();
+
         $param = array_merge($this->srchList, $param);
         return view('layout.home.index', $param);
     }
@@ -67,6 +70,21 @@ class HomeController extends Controller
         return $hotJobWorkList;
     }
 
+    private function getHtmlRecentJobList()
+    {
+        $jobWork          = new JobWork();
+        $recentJobWorkList = $jobWork->getRecentJobList(9); // Lấy 9 công việc mới nhất
+        return $recentJobWorkList;
+    }
+
+    private function getHtmlTopJobsWithMostCandidates()
+    {
+        $jobWork          = new JobWork();
+        $topJobsWithMostCandidates = $jobWork->getTopJobsWithMostCandidates(9); // Lấy 9 công việc mới nhất
+        return $topJobsWithMostCandidates;
+    }
+
+    
     private function getJobWorkBasicList()
     {
         $jobWork     = new JobWork();
@@ -109,6 +127,20 @@ class HomeController extends Controller
         return $htmlJobWorkBasicArea;
     }
 
+    private function getHtmlRecentJobListHtmlArea()
+    {
+        $recentJobList     = $this->getHtmlRecentJobList()->take(12);
+        $htmlRecentJobListHtmlArea = view('layout.home.recent_job', ['recentJobList' =>  $recentJobList])->render();
+        return $htmlRecentJobListHtmlArea;
+    }
+
+    private function getHtmlTopJobsWithMostCandidatesHtmlArea()
+    {
+        $topJobsWithMostCandidates = $this->getHtmlTopJobsWithMostCandidates();
+        $htmlTopJobsWithMostCandidatesHtmlArea = view('layout.home.top_jobs', ['topJobsWithMostCandidates' => $topJobsWithMostCandidates])->render();
+        return $htmlTopJobsWithMostCandidatesHtmlArea;
+    }
+    
     private function getTagList($jobId)
     {
         $tagList = DB::table('job_tag')->join('tags', 'tags.id', '=', 'job_tag.tag_id')

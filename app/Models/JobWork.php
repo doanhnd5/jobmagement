@@ -67,4 +67,21 @@ class JobWork extends Model
             ->get();
         return $hotJobList;
     }
+
+    public function getRecentJobList($limit)
+    {
+        return $this->orderBy('create_datetime', 'desc')
+                    ->limit($limit)
+                    ->get();
+    }
+
+    function getTopJobsWithMostCandidates($limit = 9)
+    {
+        $topJobs = JobWork::join('candidates', 'job_work.id', '=', 'candidates.job_id')
+                        ->groupBy('job_work.id')
+                        ->orderByRaw('COUNT(candidates.id) DESC')
+                        ->limit($limit)
+                        ->get(['job_work.*']);
+        return $topJobs;
+    }
 }

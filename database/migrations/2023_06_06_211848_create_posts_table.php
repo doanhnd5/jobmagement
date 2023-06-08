@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('post_title');
             $table->string('image_name');
-            $table->string('post_content');
+            $table->text('post_content', 65535);
             $table->boolean('is_publish')->nullable();
             $table->timestamp('create_datetime')->nullable()->comment('Thời gian đăng post');
             $table->string('create_user', 256)->nullable()->comment('Người đăng post');

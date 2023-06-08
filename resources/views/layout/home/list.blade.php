@@ -117,15 +117,6 @@
                                                 <dt class="type"><span class="font-bold">Trạng thái</span></dt>
                                                 <dd class="employee">{{ ScreenConst::JOB_TYPE_NAME[$job['employment_type_id']] }}</dd>
                                             </dl>
-                                            <dl>
-                                                {{-- <dd class="w-full">
-                                                @foreach($job->tags as $tag)
-                                                    <span class="inline-block border border-98B9EA rounded p-1 font-medium text-[10px] leading-4 text-main-blue mb-1">
-                                                        {{$tag->name ?? 'tag name'}}
-                                                    </span>
-                                                @endforeach
-                                                </dd> --}}
-                                            </dl>
                                         </div>
                                     </a>
                                     <div class="btns h-9 text-center">

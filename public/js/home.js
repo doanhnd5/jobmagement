@@ -17,8 +17,8 @@ $(function() {
     });
 
     $(document).on('click', 'a', function(e) {
-        openLoading();
         e.preventDefault();
+        openLoading();
         window.location.href = $(this).attr('href');
     });
 

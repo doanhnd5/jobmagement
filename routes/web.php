@@ -21,6 +21,7 @@ Route::post('/home/search', [App\Http\Controllers\HomeController::class, 'search
 Route::get('/job/list/{id?}', [App\Http\Controllers\HomeController::class, 'getJobList'])->name('get_job_list');
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'login'])->name('login.login');
+Route::post('/change_password', [App\Http\Controllers\LoginController::class, 'changePassword'])->name('login.change_password');
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('auth_user');
 Route::get('/candidates', [App\Http\Controllers\CadidatesController::class, 'index'])->name('candidates')->middleware('auth_user');

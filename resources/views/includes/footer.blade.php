@@ -1,3 +1,6 @@
+@php
+    $isLogin = App\Libs\SessionManager::isLogin();
+@endphp
 <footer id="footer">
     <!-- FOOTER START -->
     <div class="footer">
@@ -31,6 +34,11 @@
                     <li>
                         <a target="_blank" href="https://m.me/thanhgiangseikou">Liên hệ</a>
                     </li>
+                    @if ($isLogin)
+                        <li>
+                            <a href="#" id="btnShowModalChangePassword">Thay đổi mật khẩu</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="col">
@@ -44,4 +52,6 @@
             <div class="clearfix"></div>
         </div>
     </div>
+
+    @include('includes.modal.change_password')
 </footer>

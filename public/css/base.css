@@ -663,6 +663,10 @@ ul.hot_job li .job_detail {
     color: blue;
 }
 
+#spinerLoading {
+    z-index: 70;
+}
+
 
 info {
     font-family: "Poppins", sans-serif;

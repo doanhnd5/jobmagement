@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->timestamp('update_datetime')->nullable();
+            $table->string('update_user', 256)->nullable();
         });
     }
 

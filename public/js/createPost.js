@@ -5,6 +5,11 @@ let urlParamIndex = {
 
 $(function() {
 
+    // TODO
+    // ClassicEditor.create(document.querySelector('#txtPostContent'), {
+    //     language: 'vi',
+    // });
+
     let urlParamSearchKeyList = [
         'srchPostTitle'
     ];

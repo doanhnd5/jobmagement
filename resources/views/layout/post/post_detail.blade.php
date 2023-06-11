@@ -9,6 +9,9 @@
     </section>
     <div class="max-w-[820px] m-auto">
         <div class="job-work-detail-body text-555">
+            <figure class="job-detail-slick border aspect-[45/23] mb-4 my-5">
+                <img src="{{ !empty($postData['image_name']) ? asset('image/post/' . $postData['image_name']) : asset('image/post/default.jpg') }}" alt="{{ $postData['image_name'] ?? "default.jpg" }}" class="w-full h-full object-cover">
+            </figure>
             <div class="m-auto">
                 <div class="bg-white p-3 md:p-5 mb-5" style="min-height: 305px">
                     <div class="grid mb-4 text-center">

@@ -180,7 +180,7 @@ class PostListController extends Controller
         $post     = new Posts();
         $postList = $post->getPostList($this->srchList);
         $param = [
-            'postList' => $postList->paginate(1),
+            'postList' => $postList->paginate(ScreenConst::MAX_PER_PAGE),
         ];
         return view('layout.post.table_post', $param)->render();
     }

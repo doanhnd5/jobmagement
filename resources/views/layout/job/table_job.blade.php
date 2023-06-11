@@ -41,7 +41,7 @@
                     <div class="text-sm leading-5">{{ ScreenConst::JOB_TYPE_NAME[$jobWork['employment_type_id']] }}</div>
                 </td>
                 <td class="px-6 py-4 text-sm leading-5  whitespace-no-wrap border-b border-gray-200 text-center">
-                    <div class="text-sm leading-5">{{  App\Libs\SystemUtil::formatNumber($jobWork['salary']) . '円' }}</div>
+                    <div class="text-sm leading-5">{{  App\Libs\SystemUtil::formatNumber($jobWork['salary']) }}</div>
                 </td>
                 @php
                     $workTimeFrom = App\Libs\SystemUtil::getWorkTime($jobWork['work_time_from']);

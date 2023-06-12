@@ -44,7 +44,7 @@
 
 
 @if ($topJobsWithMostCandidates->count() != 0)
-    @if ($recentJobList->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
+    @if ($topJobsWithMostCandidates->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
         <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
         <div class="popular-see-more text-center md:mb-4">
             <a href="{{ route('get_job_list') }}" class="see-more-btn inline-flex items-center">

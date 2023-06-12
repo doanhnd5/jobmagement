@@ -1,0 +1,42 @@
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2023-06-04 20:05:01 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-04 20:05:04 App\Jobs\SendMailJob ................... 3,173.57ms DONE
+  2023-06-04 20:05:57 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-04 20:06:00 App\Jobs\SendMailJob ................... 2,484.97ms DONE
+  2023-06-04 20:59:43 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-04 20:59:46 App\Jobs\SendMailJob ................... 3,163.64ms DONE
+  2023-06-08 11:45:38 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-08 11:45:41 App\Jobs\SendMailJob ................... 2,967.19ms DONE
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php8.2' 'artisan' 'queue:work' '--once' '--name=default' '--queue=default' '--backoff=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /var/www/html/jobmagement/vendor/symfony/process/Process.php:1154
+    1150▕ 
+    1151▕         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1152▕             $this->stop(0);
+    1153▕ 
+  ➜ 1154▕             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1155▕         }
+    1156▕ 
+    1157▕         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1158▕             $this->stop(0);
+
+      [2m+17 vendor frames [22m
+
+  18  /var/www/html/jobmagement/artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2023-06-12 18:35:50 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-12 18:35:53 App\Jobs\SendMailJob ................... 3,036.09ms DONE
+  2023-06-12 18:35:53 App\Jobs\SendMailJob ........................... RUNNING
+  2023-06-12 18:35:56 App\Jobs\SendMailJob ................... 2,360.67ms DONE

@@ -12,11 +12,15 @@
     flex-direction: column;
     height: 100vh;
     background-color: #ffffff;
+<<<<<<< HEAD
+    font-family: "Arial", sans-serif;
+=======
     top: 0 !important;
   }
 
   body, body * {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+>>>>>>> 6655c4c5654322edf6d0d9e7759b9dd054995334
   }
   main {
     flex: 1;
@@ -263,7 +267,7 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 12px;
-    color: #ff9854;
+    color: var(--main_color);
     background-color: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -492,12 +496,12 @@
     display: block;
     font-size: 16px;
     text-decoration: none;
-    color: rgb(255, 111, 0);
+    color: var(--main_color);
   }
 
   .nav-tab:hover, .nav-tab:active {
       color: #ffffffed;
-      background-color: rgb(216, 115, 0);
+      background-color: var(--main_color);
       cursor: pointer;
       min-width: 30px;
       border-radius: 50%;
@@ -1260,7 +1264,7 @@ a:hover {
       left: -100%;
       text-align: center;
       transition: all .5s;
-      background-color: #e67818;
+      background-color: #ffffff;
   }
   nav ul li {
       display: block;
@@ -1269,7 +1273,7 @@ a:hover {
   }
   nav ul li a {
       font-size: 20px;
-      color: #ffffff !important;
+      color: #ff0000 !important;
   }
   .close-btn {
     display: block;

@@ -1,5 +1,11 @@
 @extends('layout.base')
 
+@section('ogp-meta')
+    <meta property="og:title" content="{{ $jobWork['job_name'] ?? "" }}">
+    <meta property="og:image" content="{{ !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}">
+    <meta property="og:url" content="{{ route('detail', ['id' => $jobWork['id']]) }}">
+@endsection
+
 @section('content')
 <div class="job-work-detail">
     <section class="fv relative -mt-[50px] md:mt-0 hidden md:block">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns:og="http://ogp.me/ns#">
 
 <head>
     {{-- Meta Tag --}}
@@ -8,6 +8,7 @@
     <title>Job-visa</title>
     <meta name="description"
         content="Công ty cổ phần SEIKOU T&T, cup cấp dịch vụ hỗ trợ, phục vụ người Việt và nước ngoài tại Nhật.">
+    @yield('ogp-meta')
 
     <link rel="icon" href="{{ url('image/logo2.png') }}">
     {{-- CSS --}}

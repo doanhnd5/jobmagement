@@ -922,7 +922,7 @@ info {
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #070617;
+    background-color: rgb(249, 249, 249);
   }
   .footer .col {
     width: 190px;
@@ -933,6 +933,15 @@ info {
     -moz-box-sizing: border-box;
     padding: 0px 20px 20px 20px;
   }
+  .footer .col.map-col {
+    width: 380px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+  }
   .footer .col h1 {
     margin: 0;
     padding: 0;
@@ -940,7 +949,7 @@ info {
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: rgba(255,255,255,0.2);
+    color: white;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;
@@ -951,8 +960,8 @@ info {
     padding: 0;
   }
   .footer .col ul li {
-    color: #999999;
-    font-size: 14px;
+    color: #000000;
+    font-size: 18px;
     font-family: inherit;
     font-weight: bold;
     padding: 5px 0px 5px 0px;
@@ -967,7 +976,7 @@ info {
   }
 
   .footer .col ul li:hover {
-    color: #ffffff;
+    color: #0011ff;
     transition: .1s;
     -webkit-transition: .1s;
     -moz-transition: .1s;

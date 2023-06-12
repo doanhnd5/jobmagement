@@ -12,9 +12,9 @@
         <div class="about-content">
         <div class="wpb_wrapper">
                 <h2><strong>Lời chào</strong></h2>
-                <p>Công ty chúng tôi bắt đầu là một trường dạy tiếng Nhật ở Thanh Giang, Việt Nam vào năm 2011.</p>
+                <p>Công ty chúng tôi bắt đầu là một trường dạy tiếng Nhật ở Thanh Giang Seiko, Việt Nam vào năm 2011.</p>
                 <p>Năm 2020, chúng tôi bắt đầu cung cấp dịch vụ SIM và dịch vụ nhân sự cho người toàn cầu, đồng thời cung cấp dịch vụ tuyển dụng và tư vấn cho người nước ngoài.</p>
-                <p>Ngoài ra, hợp tác với một công ty tập đoàn địa phương, chúng tôi đã bắt đầu dịch vụ tư vấn giới thiệu với tư cách là tổ chức phái cử nhân lực tay nghề cao, kỹ năng đặc thù 1 và thực tập sinh kỹ năng.</p>
+                <p>Ngoài ra, hợp tác với một công ty tập đoàn địa phương, chúng tôi đã bắt đầu dịch vụ tư vấn giới thiệu với tư cách là tổ chức phái cử nhân lực tay nghề cao, kỹ năng đặc định 1 và thực tập sinh kỹ năng.</p>
                 <p>Dịch vụ nhân sự nhằm giải quyết và tìm hiểu cụ thể các vấn đề liên quan đến tuyển dụng mà khách hàng gặp phải.</p>
                 <p>Chúng tôi tin rằng “thành công” kinh doanh ban đầu đang ở phía trước.</p>
                 <p>Vì vậy, chúng tôi quyết định đưa tên Seiko "Success" vào tên công ty của chúng tôi.</p>

@@ -27,7 +27,7 @@ class Posts extends Model
         )->when(isset($srchList['srchPostTitle']), function($query) use ($srchList) {
             $query->where('posts.post_title', 'LIKE', "%". $srchList['srchPostTitle'] ."%");
         })
-        ->orderBy('posts.id', 'asc');
+        ->orderBy('posts.id', 'desc');
 
         return $postList;
     }

@@ -30,6 +30,35 @@ class PostListController extends Controller
         }
     }
 
+    public function getPostList(Request $request)
+    {
+        try {
+            $postList = Posts::all()->paginate(ScreenConst::MAX_PER_PAGE_HOME_LIST);
+            $param = [];
+            $param['postList'] = $postList;
+            return view('layout.post.public_post', $param);
+        } catch (\Exeption $ex) {
+            return view('errors.index');
+        }
+    }
+
+    public function getPostDetail(Request $request)
+    {
+        try {
+            $postData = Posts::where('id', '=', $request->id)->first();
+            if (is_null($postData)) {
+                return view('errors.index');
+            }
+            $param = [];
+            $param['postData'] = $postData;
+            return view('layout.post.post_detail', $param);
+        } catch (\Exeption $ex) {
+            return view('errors.index');
+        }
+    }
+
+
+
     public function search(Request $request)
     {
         try {
@@ -151,7 +180,7 @@ class PostListController extends Controller
         $post     = new Posts();
         $postList = $post->getPostList($this->srchList);
         $param = [
-            'postList' => $postList->paginate(1),
+            'postList' => $postList->paginate(ScreenConst::MAX_PER_PAGE),
         ];
         return view('layout.post.table_post', $param)->render();
     }

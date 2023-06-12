@@ -14,3 +14,4 @@ return [
     'EM005' => "Bạn đã ứng tuyển công việc này". "\n" . "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất",
     'EM006' => "Gửi mail thất bại",
 ];
+

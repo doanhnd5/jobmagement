@@ -59,7 +59,7 @@
                                                     <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
                                                 </li>
                                                 <li class="item-text pl-1 self-center truncate">
-                                                    <span class="inline-block">{{ App\Libs\SystemUtil::formatNumber($job['salary']) . '円' }}</span>
+                                                    <span class="inline-block">{{ App\Libs\SystemUtil::formatNumber($job['salary']) }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -110,21 +110,12 @@
                                             <dl>
                                                 <dt class="icon-currency-yen-blue"><span class="font-bold">Mức lương</span></dt>
                                                 <dd>
-                                                    {{ App\Libs\SystemUtil::formatNumber($job->salary) .'円'}}
+                                                    {{ App\Libs\SystemUtil::formatNumber($job->salary) }}
                                                 </dd>
                                             </dl>
                                             <dl>
                                                 <dt class="type"><span class="font-bold">Trạng thái</span></dt>
                                                 <dd class="employee">{{ ScreenConst::JOB_TYPE_NAME[$job['employment_type_id']] }}</dd>
-                                            </dl>
-                                            <dl>
-                                                {{-- <dd class="w-full">
-                                                @foreach($job->tags as $tag)
-                                                    <span class="inline-block border border-98B9EA rounded p-1 font-medium text-[10px] leading-4 text-main-blue mb-1">
-                                                        {{$tag->name ?? 'tag name'}}
-                                                    </span>
-                                                @endforeach
-                                                </dd> --}}
                                             </dl>
                                         </div>
                                     </a>

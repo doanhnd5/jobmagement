@@ -31,7 +31,7 @@
                     <h2>
                         <span class="text_excerpt">
                             <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
-                            {{ App\Libs\SystemUtil::formatNumber($job['salary']) . '円' }}
+                            {{ App\Libs\SystemUtil::formatNumber($job['salary'])}}
                         </span>
                     </h2>
                 </div>
@@ -44,7 +44,7 @@
 
 
 @if ($jobWorkBasicList->count() != 0)
-    @if ($jobWorkBasicList->count() >= ScreenConst::MAX_PER_PAGE_JOB_HOME_PAGE)
+    @if ($jobWorkBasicList->count() >= 1)
         <div id="slick-slider-dots" class="slick-slider-dots mb-4 md:mb-7.5"></div>
         <div class="popular-see-more text-center md:mb-4">
             <a href="{{ route('get_job_list') }}" class="see-more-btn inline-flex items-center">

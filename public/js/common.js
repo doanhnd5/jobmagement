@@ -44,6 +44,59 @@ $(function() {
         window.location.href = $(this).attr('href');
     });
 
+    $('#btnShowModalChangePassword').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#modalChangePassword').removeClass('hidden');
+    });
+
+    $('#btnCloseModal').on('click', function(e) {
+        $('#modalChangePassword').addClass('hidden');
+    });
+
+    window.onclick = function(e) {
+        if (e.target.id === "modalChangePassword") {
+            $('#modalChangePassword').addClass('hidden');
+        }
+    }
+
+    $(document).on('click', '#btnChangePassword', function() {
+        confirmExPromiseInfo($(this).data('cfm-msg')).then(function() {
+            openLoading();
+            let reqData = {};
+            reqData['email']            = $('#txtMdlEmail').val();
+            reqData['current_password'] = $('#txtCurrentPassword').val();
+            reqData['new_password']     = $('#txtNewPassword').val();
+            $.ajax({
+                url      : $('#btnChangePassword').data('url'),
+                type     : 'POST',
+                data     : reqData,
+            }).done(function (data) {
+                if (data.status == PROCESS_STATUS_SUCCESS) {
+                    alertExPromiseSuccess(data.alertMsg).then(function() {
+                        $('#modalChangePassword').addClass('hidden');
+                    });
+                } else if (data.status == PROCESS_STATUS_ERROR) {
+                    resetErrorMsg('#modalChangePassword');
+                    if (data.errorMsg) {
+                        const errMstList = data.errorMsg;
+                        setErrorMsg(errMstList['email'], '#txtMdlEmail', 'mdl-change-password');
+                        setErrorMsg(errMstList['current_password'], '#txtCurrentPassword', 'mdl-change-password');
+                        setErrorMsg(errMstList['new_password'], '#txtNewPassword', 'mdl-change-password');
+                    }
+                } else {
+                    alertExPromiseError(data.alertMsg).then(() => {
+                        openLoading();
+                        window.location.href = data.url;
+                    });
+                }
+            }).fail(function (data) {
+                showMessageFail(data.status);
+            }).always(function(data) {
+                closeLoading();
+            });
+        }).catch(function(e) {});
+    })
 });
 
 function openLoading() {

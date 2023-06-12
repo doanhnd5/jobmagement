@@ -26,11 +26,17 @@ class SystemUtil
         return $workTime;
     }
 
-    public static function formatNumber($number)
+    public static function formatNumber($salary)
     {
-        if (isset($number)) {
-            $number = number_format($number);
+        if (isset($salary)) {
+            if (is_numeric($salary)) {
+                $salary = number_format(intval($salary)) . '円';
+            } else {
+                preg_match_all('/[^\d]+/', $salary, $strPartArr);
+                preg_match('/\d+/', $salary, $numberPartArr);
+                $salary = number_format(intval($numberPartArr[0])) . $strPartArr[0][0];
+            }
         }
-        return $number;
+        return $salary;
     }
 }

@@ -40,7 +40,7 @@ return [
     'decimal' => 'The :attribute field must have :decimal decimal places.',
     'declined' => 'The :attribute field must be declined.',
     'declined_if' => 'The :attribute field must be declined when :other is :value.',
-    'different' => 'The :attribute field and :other must be different.',
+    'different' => ':attribute và :other không được trùng nhau.',
     'digits' => 'The :attribute field must be :digits digits.',
     'digits_between' => 'The :attribute field must be between :min and :max digits.',
     'dimensions' => 'The :attribute field has invalid image dimensions.',
@@ -204,5 +204,7 @@ return [
         'date_of_birth'  => 'Ngày tháng năm sinh',
         'post_title'  => 'Tiêu đề',
         'post_content'  => 'Nội dung',
+        'current_password'  => 'Mật khẩu hiện tại',
+        'new_password'  => 'Mật khẩu mới',
     ],
 ];

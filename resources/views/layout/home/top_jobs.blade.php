@@ -31,7 +31,7 @@
                     <h2>
                         <span class="text_excerpt">
                             <i class="icon-currency-yen-blue w-3.5 h-3.5"></i>
-                            {{ App\Libs\SystemUtil::formatNumber($job['salary']) . '円' }}
+                            {{ App\Libs\SystemUtil::formatNumber($job['salary']) }}
                         </span>
                     </h2>
                 </div>

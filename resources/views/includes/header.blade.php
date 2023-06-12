@@ -21,9 +21,7 @@
             <li><button" class="close-btn" id="close-btn">&times;</button></li>
             <li><a href="/" class="block mt-4 lg:inline-block nav-tab">Trang chủ</a></li>
             <li><a href="{{ route('get_job_list') }}" class="block mt-4 lg:inline-block nav-tab">Tuyển dụng</a></li>
-            <!--
-            <li><a href="/" class="block mt-4 lg:inline-block nav-tab">Visa</a></li>
--->
+            <li><a href="{{ route('post.list') }}" class="block mt-4 lg:inline-block nav-tab">Visa</a></li>
             <li><a href="/about" class="block mt-4 lg:inline-block nav-tab">Giới thiệu</a></li>
             <li>
             </li>

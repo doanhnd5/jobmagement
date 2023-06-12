@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('job_name')->comment('Tên Job');
             $table->string('employment_type_id')->comment('Hình thức tuyển dụng');
             $table->string('company_name')->comment('Tên công ty');
-            $table->integer('salary')->comment('Mức lương cơ bản');
+            $table->string('salary')->comment('Mức lương cơ bản');
             $table->string('work_time_from')->comment('Thời gian bắt đầu làm việc');
             $table->string('work_time_to')->comment('Thời gian kết thúc làm việc');
             $table->string('workplace_prefecture')->comment('Khu vực');

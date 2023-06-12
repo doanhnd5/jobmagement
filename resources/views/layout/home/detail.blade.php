@@ -4,12 +4,15 @@
 <div class="job-work-detail">
     <section class="fv relative -mt-[50px] md:mt-0 hidden md:block">
         <div class="fv-slider relative h-[260px]">
-          <img src="{{ asset('image/jobsempai_layer.jpg') }}" class="w-full h-full object-cover">
+          <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
         </div>
     </section>
     <div class="max-w-[820px] m-auto">
         <div class="job-work-detail-header">
             <h2 class="job-title my-5 font-bold text-sm text-center">{{ $jobWork['job_name'] ?? "" }}</h2>
+            <figure class="job-detail-slick border aspect-[45/23] mb-4">
+                <img src="{{ !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}" alt="{{ $jobWork['image_name'] ?? "job_1.jpg" }}" class="w-full h-full object-cover">
+            </figure>
             <div class="p-3 md:p-5 mb-6 bg-third-blue">
                 <div class="job-infor">
                     <div class="flex justify-center items-center mr-[3px]">
@@ -26,7 +29,7 @@
                     </div>
                     <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Mức lương</div>
                     <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
-                        {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary) . '円' }}
+                        {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary)}}
                     </div>
                 </div>
                 <div class="list_tag flex flex-wrap gap-[8px] mt-[8px]">
@@ -58,7 +61,9 @@
                         @endphp
                         <ol>
                             @foreach ($descriptionList as $description)
-                                <li class="description">{{ $description }}</li>
+                                @if (!empty($description))
+                                    <li class="description">{{ $description }}</li>
+                                @endif
                             @endforeach
                         </ol>
                     </div>
@@ -86,7 +91,7 @@
                         <div class="font-bold text-sm leading-[21px] tracking-[.04em] text-5 line-left mb-1">Lương cơ bản</div>
                         <div class="font-light text-sm leading-[21px] tracking-[.04em text-5] pl-2 mb-[10px]">
                             @if (isset($jobWork['salary']))
-                                {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary) . '円' }}
+                                {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary)}}
                             @endif
                         </div>
                         @php

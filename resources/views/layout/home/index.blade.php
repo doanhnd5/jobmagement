@@ -100,7 +100,7 @@
     <section class="popular pt-home mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px] xs:pt-home">
         <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
             <div class="sectionTitle text-center">
-                <h2 class="font-serif font-medium text-base md:text-xl text-center text-white text-4E4A40 my-2.5">
+                <h2 class="font-serif font-medium text-base md:text-xl text-center text-0011ff text-4E4A40 my-2.5">
                     <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc được nhiều người ứng tuyển</span>
                 </h2>
             </div>
@@ -188,7 +188,7 @@
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="text-center">
         <h2 class="font-serif font-medium text-base md:text-xl text-center text-FFA500 my-2.5">
-            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc đựợc ứng tuyển nhiều nhất</span>
+            <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Công việc được ứng tuyển nhiều nhất</span>
         </h2>
         <div class="recent-job-list">
         <div class="recent-job-list">

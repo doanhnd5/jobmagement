@@ -24,7 +24,9 @@
 ::after {
   --tw-content: '';
 }
-
+:root{
+  --main_color:#0011ff;
+}
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -1471,7 +1473,7 @@ video {
 
 .bg-blue-100 {
   --tw-bg-opacity: 1;
-  background-color: #ff9854;
+  background-color: #1a56d8;
 }
 
 .bg-white {
@@ -1491,17 +1493,17 @@ video {
 
 .bg-main-blue {
   --tw-bg-opacity: 1 !important;
-  background-color: #ff9854 !important;
+  background-color: var(--main_color) !important;
 }
 
 .bg-CBE3FF {
   --tw-bg-opacity: 1;
-  background-color: #ff9854;
+  background-color: white;
 }
 
 .bg-FF7A00 {
   --tw-bg-opacity: 1;
-  background-color: #ff9854;
+  background-color: var(--main_color);
 }
 
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.5\)\] {

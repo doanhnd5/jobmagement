@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\JobWork;
 use App\Models\Tag;
+use App\Models\Posts;
 use App\Consts\ScreenConst;
 use App\Libs\SessionManager;
 use Illuminate\Support\Facades\DB;
@@ -27,8 +28,9 @@ class HomeController extends Controller
         $param['tagList']              = Tag::all()->pluck('name', 'id');
         $param['jobWorkHotList']       = $this->getHtmlHotJobList();
         $param['htmlJobWorkBasicArea'] = $this->getJobWorkBasicHtmlArea();
-        $param['htmlRecentJobListHtmlArea']    =$this->getHtmlRecentJobListHtmlArea();
-        $param['htmlTopJobsWithMostCandidatesHtmlArea']    =$this->getHtmlTopJobsWithMostCandidatesHtmlArea();
+        $param['htmlRecentJobListHtmlArea'] = $this->getHtmlRecentJobListHtmlArea();
+        $param['htmlTopJobsWithMostCandidatesHtmlArea'] = $this->getHtmlTopJobsWithMostCandidatesHtmlArea();
+        $param['htmlPostList'] = $this->getPostList();
 
         $param = array_merge($this->srchList, $param);
         return view('layout.home.index', $param);
@@ -84,7 +86,7 @@ class HomeController extends Controller
         return $topJobsWithMostCandidates;
     }
 
-    
+
     private function getJobWorkBasicList()
     {
         $jobWork     = new JobWork();
@@ -140,7 +142,7 @@ class HomeController extends Controller
         $htmlTopJobsWithMostCandidatesHtmlArea = view('layout.home.top_jobs', ['topJobsWithMostCandidates' => $topJobsWithMostCandidates])->render();
         return $htmlTopJobsWithMostCandidatesHtmlArea;
     }
-    
+
     private function getTagList($jobId)
     {
         $tagList = DB::table('job_tag')->join('tags', 'tags.id', '=', 'job_tag.tag_id')
@@ -156,5 +158,13 @@ class HomeController extends Controller
             $tagList = $tagList->pluck('name', 'id')->toArray();
         }
         return $tagList;
+    }
+
+    private function getPostList()
+    {
+        $postList = Posts::orderBy('id', 'desc')->get();
+        $param = [];
+        $param['postList'] = $postList;
+        return view('layout.home.post_list', $param);
     }
 }

@@ -128,7 +128,6 @@
                                 </li>
                             @endforeach
                         @else
-                            <li class="">Không có thông tin tuyển dụng</li>
                         @endif
                     </ul>
                 </div>

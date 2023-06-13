@@ -29,6 +29,8 @@ Route::post('/confirm', [App\Http\Controllers\CadidatesController::class, 'confi
 Route::post('/change_contact_status', [App\Http\Controllers\CadidatesController::class, 'changeContactStatus'])->name('change_contact_status')->middleware('auth_user');
 Route::post('/candidates/search', [App\Http\Controllers\CadidatesController::class, 'search'])->name('candidates.search')->middleware('auth_user');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('about');
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
+
 
 Route::get('/job', [App\Http\Controllers\JobListController::class, 'index'])->name('job_list')->middleware('auth_user');
 Route::post('/delete', [App\Http\Controllers\JobListController::class, 'delete'])->name('delete')->middleware('auth_user');

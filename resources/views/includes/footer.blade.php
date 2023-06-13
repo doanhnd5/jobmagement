@@ -13,7 +13,7 @@
                 </ul>
             </div>
             <div class="col">
-                <h1 style="color:white">Liên hệ</h1>
+                <h1 style="color:black">Liên hệ</h1>
                 <ul>
                 <li><a target="_blank" href="/about">
                             Về chúng tôi</a></li>
@@ -24,7 +24,7 @@
             </div>
             <div class="col"></div>
             <div class="col">
-                <h1 style="color:white">Tuyển dụng</h1>
+                <h1 style="color:black">Tuyển dụng</h1>
                 <ul>
                     <li><a href="/">Trang chủ</a></li>
                     <li>

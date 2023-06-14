@@ -1,6 +1,6 @@
 $(function() {
     $(document).on('click', '.btn-confirm-contact', function() {
-        const url = $(btn).data('url');
+        const url = $(this).data('url');
         const msg = $(this).data('cfm-msg');
         confirm(this, msg, url)
     });

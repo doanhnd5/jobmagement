@@ -78,7 +78,10 @@
                 </td>
                 <td class="px-6 py-4 text-sm leading-5 whitespace-no-wrap border-b border-gray-200 text-center">
                     <input class="remark shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      type="text" value="{{ $candidatesData['remark'] }}">
+                      type="text" value="{{ $candidatesData['remark'] }}" data-cfm-msg="{{ __('messages.I0005') }}"
+                        data-url="{{ route('remark') }}"
+                        data-id="{{ $candidatesData['id'] }}"
+                        title="{{ $candidatesData['remark'] }}">
                 </td>
                 <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200 text-center">
                     @if (!$candidatesData['is_contacted'])

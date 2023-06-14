@@ -26,6 +26,7 @@ Route::post('/change_password', [App\Http\Controllers\LoginController::class, 'c
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('auth_user');
 Route::get('/candidates', [App\Http\Controllers\CadidatesController::class, 'index'])->name('candidates')->middleware('auth_user');
 Route::post('/confirm', [App\Http\Controllers\CadidatesController::class, 'confirm'])->name('confirm')->middleware('auth_user');
+Route::post('/update_remark', [App\Http\Controllers\CadidatesController::class, 'updateRemark'])->name('remark')->middleware('auth_user');
 Route::post('/change_contact_status', [App\Http\Controllers\CadidatesController::class, 'changeContactStatus'])->name('change_contact_status')->middleware('auth_user');
 Route::post('/candidates/search', [App\Http\Controllers\CadidatesController::class, 'search'])->name('candidates.search')->middleware('auth_user');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('about');

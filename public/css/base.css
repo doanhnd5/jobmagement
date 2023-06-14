@@ -845,6 +845,12 @@ info {
     transition: scale ease 100ms;
   }
 
+  .job-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
 .border-t-transparent {
     border-top-color: transparent;
 }
@@ -1038,11 +1044,11 @@ info {
   .contact {
     display: flex;
   }
-  
+
   .contact a {
     margin-right: 10px;
   }
-  
+
   .heading h1{
     font-size: 50px;
     color: #000;

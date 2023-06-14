@@ -128,7 +128,8 @@
                                                 <p
                                                     class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2 px-1">
                                                     {{ $job->company_name ?? '' }}</p>
-                                                <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate px-1">
+                                                <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate px-1 job-name"
+                                                    title="{{ $job->job_name ?? '' }}">
                                                     {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}</h3>
                                             </div>
                                             <div

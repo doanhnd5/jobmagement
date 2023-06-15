@@ -36,7 +36,7 @@
                                                 <p
                                                     class="company-tit text-[11px] leading-4 text-888 mb-1 truncate lg:px-2 px-1">
                                                     {{ $job->company_name ?? '' }}</p>
-                                                <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate px-1">
+                                                <h3 class="title font-bold text-xs text-40381F lg:px-2 truncate px-1 job-name" title="{{ $job->job_name ?? '' }}">
                                                     {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}</h3>
                                             </div>
                                             <div
@@ -105,7 +105,7 @@
                                                     width="282" height="212" alt=""
                                                     class="w-full h-full object-cover">
                                             </figure>
-                                            <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 line-clamp-2">
+                                            <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 job-name" title="{{ $job->job_name ?? '' }}">
                                                 {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}
                                             </p>
                                         </div>

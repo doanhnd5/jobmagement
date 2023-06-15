@@ -27,7 +27,7 @@
                                             </figure>
                                         </div>
                                         <div class="job_detail">
-                                            <h3 class="job-name-detail">{{ $job['job_name'] }}</h3>
+                                            <h3 class="job-name-detail job-name" title="{{ $job->job_name ?? '' }}">{{ $job['job_name'] }}</h3>
                                             <h2>
                                                 <span class="text_excerpt">
                                                     <i class="icon-business-center-blue w-3.5 h-3.5"></i>

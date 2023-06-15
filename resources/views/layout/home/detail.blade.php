@@ -35,7 +35,9 @@
                     </div>
                     <div class="font-bold text-xs leading-[18px] tracking-wider text-[#ffff]">Mức lương</div>
                     <div class="font-medium text-xs leading-[18px] tracking-[0.01em] text-[#ffff]">
-                        {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary)}}
+                        @if (isset($jobWork['salary']))
+                            {{ App\Libs\SystemUtil::formatNumber($jobWork?->salary)}}
+                        @endif
                     </div>
                 </div>
                 <div class="list_tag flex flex-wrap gap-[8px] mt-[8px]">

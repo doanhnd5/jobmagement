@@ -77,6 +77,56 @@ class CadidatesController extends Controller
         }
     }
 
+    public function updateRemark(Request $request)
+    {
+        try {
+            $candidatesId = $request->id;
+            // Get data
+            $candidatesData = Candidates::where('id', '=', $candidatesId);
+            // Check data exists
+            if (!$candidatesData->exists()) {
+                $data = [
+                    'status'   => ScreenConst::PROCESS_STATUS_ERROR,
+                    'alertMsg' => __('messages.EM004', ['attribute' => 'ứng viên'])
+                ];
+                return $data;
+            }
+
+            // Check newest data
+            if ($this->isAlreadyUpdated($request, $candidatesData->first())) {
+                $data = [
+                    'status'   => ScreenConst::PROCESS_STATUS_ERROR,
+                    'alertMsg' => __('messages.EM003', ['attribute' => 'ứng viên'])
+                ];
+                return $data;
+            }
+            $paramUpdate = [];
+            $paramUpdate['remark'] = $request->remark;
+            $this->setParamUpdateInfoCommon($paramUpdate);
+            // Begin transaction
+            DB::beginTransaction();
+            Candidates::where('id', '=', $candidatesId)->update($paramUpdate);
+            // Commit
+            DB::commit();
+            // Search Newest Candidates Data
+            $this->setSrchList($request);
+            // Regist Success
+            $data = [
+                'htmCandidatesArea' => $this->getCandidateHtmlArea(),
+                'status'   => ScreenConst::PROCESS_STATUS_SUCCESS,
+                'alertMsg' => __('messages.I0002', ['attribute1' => 'Cập nhật', 'attribute2' => 'ghi chú'])
+            ];
+            return response()->json($data);
+        } catch (\Exeption $ex) {
+            DB::rollBack();
+            $data = [
+                'status'   => ScreenConst::PROCESS_STATUS_SYSTEM_ERROR,
+                'alertMsg' => __('messages.E0001', ['attribute' => 'Cập nhật ghi chú']),
+            ];
+            return response()->json($data);
+        }
+    }
+
     public function changeContactStatus(Request $request)
     {
         return $this->searchCommon($request);

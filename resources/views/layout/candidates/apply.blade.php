@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0 mb-7.5">
-        <div class="fv-slider relative h-[260px]">
+        <div class="fv-slider relative h-[520px]">
             <img src="{{ asset('image/banner_mypage.jpg') }}" class="w-full h-full object-cover">
         </div>
         <div class="fvInner w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

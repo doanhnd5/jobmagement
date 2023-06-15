@@ -9,7 +9,7 @@
 @section('content')
 <div class="job-work-detail">
     <section class="fv relative -mt-[50px] md:mt-0 hidden md:block">
-        <div class="fv-slider relative h-[260px]">
+        <div class="fv-slider relative h-[520px]">
           <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
         </div>
     </section>

@@ -10,5 +10,6 @@
 <link rel="stylesheet" href="{{ asset('plugin/slick/slick.css') }} ">
 <link rel="stylesheet" href="{{ asset('plugin/slick/slick-theme.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/jquery/jquery-ui.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/ckeditor5/build/content-styles.css') }}">
 <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 

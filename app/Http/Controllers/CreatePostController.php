@@ -135,7 +135,7 @@ class CreatePostController extends Controller
         $paramList = [];
         $paramList['post_title']   = $paramRegist->post_title;
         $paramList['post_content'] = $paramRegist->post_content;
-        if (isset($request->image)) {
+        if (!empty($this->imageName)) {
             $paramList['image_name'] = $this->imageName;
         }
         return $paramList;

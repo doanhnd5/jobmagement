@@ -27,7 +27,7 @@ $(function() {
             let formData    = new FormData();
             let registParam = getRegistParam();
             let imageFile   = imageEle.files[0];
-            formData.append('image', imageFile);
+            formData.append('image', imageFile ?? null);
             formData.append('paramRegist', JSON.stringify(registParam));
 
             $.ajax({

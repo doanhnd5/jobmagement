@@ -33,7 +33,7 @@ class PostListController extends Controller
     public function getPostList(Request $request)
     {
         try {
-            $postList = Posts::all()->paginate(ScreenConst::MAX_PER_PAGE_HOME_LIST);
+            $postList = Posts::where('is_publish', true)->paginate(ScreenConst::MAX_PER_PAGE_HOME_LIST);
             $param = [];
             $param['postList'] = $postList;
             return view('layout.post.public_post', $param);

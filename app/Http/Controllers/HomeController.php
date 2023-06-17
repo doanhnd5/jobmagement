@@ -162,7 +162,7 @@ class HomeController extends Controller
 
     private function getPostList()
     {
-        $postList = Posts::orderBy('id', 'desc')->get();
+        $postList = Posts::where('is_publish', true)->orderBy('id', 'desc')->get();
         $param = [];
         $param['postList'] = $postList;
         return view('layout.home.post_list', $param);

@@ -25,7 +25,7 @@
                         <div class="font-medium text-[12px] text-base leading-6 text-555 tracking-[.04em] text-5">Nội dung</div>
                         <span class="font-medium text-[13px] leading-5 tracking-[.04em] text-red-1000">※Bắt buộc</span>
                     </div>
-                    <textarea id="txtPostContent" rows="8"
+                    <textarea id="txtPostContent" rows="8" hidden
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         @if (isset($postData['post_content']))
                             {{ $postData->post_content }}

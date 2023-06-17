@@ -196,7 +196,7 @@ class CreateJobWorkController extends Controller
         $paramList['salary']         = $paramRegist->salary;
         $paramList['description']    = $paramRegist->description;
         $paramList['is_important']   = $paramRegist->is_important;
-        if (isset($request->image)) {
+        if (!empty($this->imageName)) {
             $paramList['image_name'] = $this->imageName;
         }
         return $paramList;

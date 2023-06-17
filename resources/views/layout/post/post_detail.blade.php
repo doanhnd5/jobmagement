@@ -26,7 +26,7 @@
                         </p>
                         <p class="font-bold text-lg">{{ $postData->post_title }}</p>
                     </div>
-                    <div class="font-light text-sm tracking-[.04em] text-5">
+                    <div class="font-light text-sm tracking-[.04em] text-5 ck-content">
                         {!! $postData->post_content !!}
                     </div>
                 </div>

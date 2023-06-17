@@ -75,13 +75,26 @@ class JobWork extends Model
                     ->get();
     }
 
-    function getTopJobsWithMostCandidates($limit = 9)
+    function getTopJobsWithMostCandidates($srchList)
     {
         $topJobs = JobWork::join('candidates', 'job_work.id', '=', 'candidates.job_id')
-                        ->groupBy('job_work.id')
-                        ->orderByRaw('COUNT(candidates.id) DESC')
-                        ->limit($limit)
-                        ->get(['job_work.*']);
+            ->when(isset($srchList['srchArea']), function($query) use ($srchList) {
+                $query->where('job_work.workplace_prefecture', '=', $srchList['srchArea']);
+            })->when(isset($srchList['srchJobType']), function($query) use ($srchList) {
+                $query->where('job_work.employment_type_id', '=', $srchList['srchJobType']);
+            })->when(isset($srchList['srchTag']), function($query) use ($srchList) {
+                $query->where('job_tag.tag_id', '=', $srchList['srchTag']);
+            })->where(function($query) use ($srchList) {
+                $query->when(isset($srchList['srchKeyAny']), function($subQuery) use ($srchList) {
+                    $srchJobType = $srchList['srchKeyAny'];
+                    $subQuery->where('job_work.job_name', 'like', "%$srchJobType%")
+                        ->orWhere('job_work.company_name', 'like', "%$srchJobType%")
+                        ->orWhere('job_work.workplace_city', 'like', "%$srchJobType%");
+                });
+            })
+            ->groupBy('job_work.id')
+            ->orderByRaw('COUNT(candidates.id) DESC')
+            ->get(['job_work.*']);
         return $topJobs;
     }
 }

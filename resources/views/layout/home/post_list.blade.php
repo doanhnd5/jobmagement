@@ -27,11 +27,11 @@
                                         </figure>
                                     </div>
                                     <div class="job_detail">
-                                        <h3 class="job-name-detail">{{ $post['post_title'] }}</h3>
+                                        <h3 class="job-name-detail line-clamp-2" title="{{ $post['post_title'] }}">{{ $post['post_title'] }}</h3>
                                         <h2>
-                                            <p class="text_excerpt line-clamp-2">
-                                                {{ $post['post_content'] }}
-                                            </p>
+                                            <div class="text_excerpt line-clamp-2 ck-content">
+                                                {!! $post['post_content'] !!}
+                                            </div>
                                         </h2>
                                     </div>
                                 </a>

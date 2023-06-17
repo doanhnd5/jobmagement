@@ -10,7 +10,7 @@ class ScreenConst
     public const  PROCESS_STATUS_SYSTEM_ERROR = 'syserr';
 
     public const MAX_PER_PAGE               = 30;
-    public const MAX_PER_PAGE_JOB_HOME_PAGE = 12;
+    public const MAX_PER_PAGE_JOB_HOME_PAGE = 9;
     public const MAX_PER_PAGE_HOME_LIST = 6;
 
     // Khu vực

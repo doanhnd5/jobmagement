@@ -43,7 +43,8 @@ function search(url) {
         dataType : 'json'
     }).done(function (data) {
         if (data.status == PROCESS_STATUS_SUCCESS) {
-            $('#divWorkBasic ul').html(data.htmlJobWorkBasicArea);
+            $('#divRencentJob').html(data.htmlRecentJobListHtmlArea);
+            $('#divTopApplyJob').html(data.htmlTopJobsWithMostCandidatesHtmlArea);
         } else if (data.status == PROCESS_STATUS_ERROR) {
             alertExPromiseError(data.alertMsg).then(() => {
                 // Loading

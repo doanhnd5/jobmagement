@@ -9,6 +9,7 @@ use App\Models\Posts;
 use App\Consts\ScreenConst;
 use App\Libs\SessionManager;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,6 @@ class HomeController extends Controller
         $param   = [];
         $param['tagList']              = Tag::all()->pluck('name', 'id');
         $param['jobWorkHotList']       = $this->getHtmlHotJobList();
-        $param['htmlJobWorkBasicArea'] = $this->getJobWorkBasicHtmlArea();
         $param['htmlRecentJobListHtmlArea'] = $this->getHtmlRecentJobListHtmlArea();
         $param['htmlTopJobsWithMostCandidatesHtmlArea'] = $this->getHtmlTopJobsWithMostCandidatesHtmlArea();
         $param['htmlPostList'] = $this->getPostList();
@@ -39,10 +39,18 @@ class HomeController extends Controller
     public function getDetailJob(Request $request)
     {
         try {
+            $previousUrl = url()->previous();
+            if (str_contains($previousUrl, 'null')) {
+                $previousUrl =  Session::get('fromPage');
+            } else {
+                $previousUrl = url()->previous();
+                Session::put('fromPage', $previousUrl);
+            }
             $jobData = JobWork::where('id', $request->id)->first();
             $param['jobWork'] = $jobData;
             $param['jobId']   = $request->id ;
             $param['tagList'] = $this->getTagList($request->id);
+            $param['previousUrl'] = $previousUrl;
             return view('layout.home.detail', $param);
         } catch (\Exeption $ex) {
             return view('errors.index');
@@ -75,23 +83,15 @@ class HomeController extends Controller
     private function getHtmlRecentJobList()
     {
         $jobWork          = new JobWork();
-        $recentJobWorkList = $jobWork->getRecentJobList(9); // Lấy 9 công việc mới nhất
+        $recentJobWorkList = $jobWork->getJobWorkList($this->srchList, true)->take(9); // Lấy 9 công việc mới nhất
         return $recentJobWorkList;
     }
 
     private function getHtmlTopJobsWithMostCandidates()
     {
         $jobWork          = new JobWork();
-        $topJobsWithMostCandidates = $jobWork->getTopJobsWithMostCandidates(9); // Lấy 9 công việc mới nhất
+        $topJobsWithMostCandidates = $jobWork->getTopJobsWithMostCandidates($this->srchList)->take(9); // Lấy 9 công việc mới nhất
         return $topJobsWithMostCandidates;
-    }
-
-
-    private function getJobWorkBasicList()
-    {
-        $jobWork     = new JobWork();
-        $jobWorkList = $jobWork->getJobWorkList($this->srchList, true);
-        return $jobWorkList;
     }
 
     private function setSrchList(Request $request)
@@ -106,10 +106,12 @@ class HomeController extends Controller
     {
         try {
             $this->setSrchList($request);
-            $htmlJobWorkBasicArea = $this->getJobWorkBasicHtmlArea();
+            $htmlRecentJobListHtmlArea = $this->getHtmlRecentJobListHtmlArea();
+            $htmlTopJobsWithMostCandidatesHtmlArea = $this->getHtmlTopJobsWithMostCandidatesHtmlArea();
             $data = [
                 'status'               => ScreenConst::PROCESS_STATUS_SUCCESS,
-                'htmlJobWorkBasicArea' => $htmlJobWorkBasicArea,
+                'htmlRecentJobListHtmlArea' => $htmlRecentJobListHtmlArea,
+                'htmlTopJobsWithMostCandidatesHtmlArea' => $htmlTopJobsWithMostCandidatesHtmlArea,
             ];
             return response()->json($data);
         } catch (\Exception $e) {
@@ -122,16 +124,9 @@ class HomeController extends Controller
         }
     }
 
-    private function getJobWorkBasicHtmlArea()
-    {
-        $jobWorkBasicList     = $this->getJobWorkBasicList()->take(12);
-        $htmlJobWorkBasicArea = view('layout.home.basic_job', ['jobWorkBasicList' =>  $jobWorkBasicList])->render();
-        return $htmlJobWorkBasicArea;
-    }
-
     private function getHtmlRecentJobListHtmlArea()
     {
-        $recentJobList     = $this->getHtmlRecentJobList()->take(12);
+        $recentJobList     = $this->getHtmlRecentJobList()->take(9);
         $htmlRecentJobListHtmlArea = view('layout.home.recent_job', ['recentJobList' =>  $recentJobList])->render();
         return $htmlRecentJobListHtmlArea;
     }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Posts;
 use App\Consts\ScreenConst;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class PostListController extends Controller
 {
@@ -49,8 +50,16 @@ class PostListController extends Controller
             if (is_null($postData)) {
                 return view('errors.index');
             }
+            $previousUrl =  url()->previous();
+            if (str_contains($previousUrl, 'null')) {
+                $previousUrl =  Session::get('fromPage');
+            } else {
+                $previousUrl = url()->previous();
+                Session::put('fromPage', $previousUrl);
+            }
             $param = [];
-            $param['postData'] = $postData;
+            $param['postData']    = $postData;
+            $param['previousUrl'] = $previousUrl;
             return view('layout.post.post_detail', $param);
         } catch (\Exeption $ex) {
             return view('errors.index');

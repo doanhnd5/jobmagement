@@ -38,12 +38,6 @@ $(function() {
         $(this).val(hhMMIIList.join(':'));
     });
 
-    $('.inner a').on('click', function(e) {
-        openLoading();
-        e.preventDefault();
-        window.location.href = $(this).attr('href');
-    });
-
     $('#btnShowModalChangePassword').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();

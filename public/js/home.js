@@ -18,6 +18,7 @@ $(function() {
 
     $(document).on('click', 'a', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         openLoading();
         window.location.href = $(this).attr('href');
     });

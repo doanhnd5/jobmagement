@@ -51,7 +51,7 @@ class PostListController extends Controller
                 return view('errors.index');
             }
             $previousUrl =  url()->previous();
-            if (str_contains($previousUrl, 'null')) {
+            if ($previousUrl == url()->current()) {
                 $previousUrl =  Session::get('fromPage');
             } else {
                 $previousUrl = url()->previous();

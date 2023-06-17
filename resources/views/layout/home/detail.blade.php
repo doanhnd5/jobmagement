@@ -2,8 +2,10 @@
 
 @section('ogp-meta')
     <meta property="og:title" content="{{ $jobWork['job_name'] ?? "" }}">
-    <meta property="og:image" content="{{ !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}">
-    <meta property="og:url" content="{{ route('detail', ['id' => $jobWork['id']]) }}">
+    <meta property="og:image" content="{{ isset($jobWork['image_name']) && !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}">
+    @if (isset($jobWork['id']))
+        <meta property="og:url" content="{{ route('detail', ['id' => $jobWork['id']]) }}">
+    @endif
 @endsection
 
 @section('content')
@@ -17,7 +19,7 @@
         <div class="job-work-detail-header">
             <h2 class="job-title my-5 font-bold text-sm text-center">{{ $jobWork['job_name'] ?? "" }}</h2>
             <figure class="job-detail-slick border aspect-[45/23] mb-4">
-                <img src="{{ !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}" alt="{{ $jobWork['image_name'] ?? "job_1.jpg" }}" class="w-full h-full object-cover">
+                <img src="{{ isset($jobWork['image_name']) && !empty($jobWork['image_name']) ? asset('image/uploaded/' . $jobWork['image_name']) : asset('image/uploaded/job_1.jpg') }}" alt="{{ $jobWork['image_name'] ?? "job_1.jpg" }}" class="w-full h-full object-cover">
             </figure>
             <div class="p-3 md:p-5 mb-6 bg-third-blue">
                 <div class="job-infor">

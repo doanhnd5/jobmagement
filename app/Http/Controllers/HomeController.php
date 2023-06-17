@@ -40,8 +40,8 @@ class HomeController extends Controller
     {
         try {
             $previousUrl = url()->previous();
-            if (str_contains($previousUrl, 'null')) {
-                $previousUrl =  Session::get('fromPage');
+            if ($previousUrl == url()->current()) {
+                $previousUrl = Session::get('fromPage');
             } else {
                 $previousUrl = url()->previous();
                 Session::put('fromPage', $previousUrl);

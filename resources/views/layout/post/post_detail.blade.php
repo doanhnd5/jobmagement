@@ -27,7 +27,7 @@
                         <p class="font-bold text-lg">{{ $postData->post_title }}</p>
                     </div>
                     <div class="font-light text-sm tracking-[.04em] text-5">
-                        {!!  nl2br(e($postData->post_content))  !!}
+                        {!! $postData->post_content !!}
                     </div>
                 </div>
             </div>

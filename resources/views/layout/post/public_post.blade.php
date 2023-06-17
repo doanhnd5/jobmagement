@@ -17,19 +17,16 @@
                         @if($postList && !$postList->isEmpty())
                             @foreach ($postList as $post)
                                 <li class="relative bg-white py-4 px-2 border-t-4 border-solid border-main-blue mb-6">
-                                    <h3 class="company-name text-main-blown p-0 mb-4 text-sm lg:text-base font-bold">
-                                        {{ $post->post_title ?? '' }}
-                                    </h3>
                                     <a class="recDetail mb-2">
                                         <div class="flex justify-between items-center mb-4">
-                                            <figure class="w-1/3 aspect-[53/40]" data-url="{{ route('post.detail', ['id' => $post['id']]) }}">
+                                            <figure class="aspect-[53/40]" data-url="{{ route('post.detail', ['id' => $post['id']]) }}">
                                                 <img src="{{ $post->image_name ? asset('image/post/' . $post->image_name) : asset('image/post/default.jpg') }}" width="282" height="212" alt="" class="w-full h-full object-cover">
                                             </figure>
-                                            <p class="job-name text-sm tracking-[0.01em] w-2/3 ml-2 line-clamp-2">
-                                                {{ $post->post_content }}
-                                            </p>
                                         </div>
                                     </a>
+                                    <p class="company-name text-main-blown p-0 mb-4 text-sm lg:text-base text-center">
+                                        {{ $post->post_title ?? '' }}
+                                    </p>
                                     <div class="btns h-9 text-center">
                                         <a href="{{ route('post.detail', ['id' => $post['id']]) }}" class="detailBtn w-[152px] h-9 inline-flex items-center justify-center bg-FF7A00 rounded absolute bottom-4 left-1/2 -translate-x-1/2">
                                             <span class="text-[11px] leading-3 font-bold text-white">Đọc thêm</span>

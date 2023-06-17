@@ -3,12 +3,13 @@ let urlParamIndex = {
     'page'   : getUrlParam('page'),
 };
 
+let editor = null;
+
 $(function() {
 
-    // TODO
-    // ClassicEditor.create(document.querySelector('#txtPostContent'), {
-    //     language: 'vi',
-    // });
+    ClassicEditor.create(document.querySelector('#txtPostContent')).then(newEditor => {
+        editor = newEditor;
+    });
 
     let urlParamSearchKeyList = [
         'srchPostTitle'
@@ -74,7 +75,7 @@ function getRegistParam() {
     param['id']                = $('#txtPostId').val();
     param['date_time_display'] = $('#txtDatetimeDisplay').val();
     param['post_title']        = $('#txtPostTitle').val();
-    param['post_content']      = $('#txtPostContent').val();
+    param['post_content']      = editor.getData();
     return param;
 }
 

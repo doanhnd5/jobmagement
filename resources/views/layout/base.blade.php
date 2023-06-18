@@ -115,7 +115,7 @@
     {{-- Header --}}
     @include('includes.header')
     {{-- Main --}}
-    <main id="main">
+    <main class="wrapper" id="main">
         <div id="spinerLoading"
             class="hidden flex justify-center items-center h-screen fixed top-0 left-0 right-0 bottom-0 w-full overflow-hidden bg-gray-700 opacity-75">
             <div

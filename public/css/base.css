@@ -930,25 +930,65 @@ info {
     width: 100%;
     position: relative;
     height: auto;
-    background-color: rgb(249, 249, 249);
+    background-color: #0b70d8;
   }
-  .footer .col {
-    width: 190px;
-    height: auto;
-    float: left;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
-  }
-  .footer .col.map-col {
-    width: 380px;
+  .footer .col.logo {
+    width: 25%;
     height: auto;
     float: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 20px 20px 20px 20px;
+  }
+  .footer .col.adress{
+    width: 50%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 40px 20px 20px 20px;
+  }
+  .footer .col.sns {
+    width: 25%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+  }
+  .footer .col.facebook {
+    width: 50%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+  }
+  .footer .col.contact {
+    width: 25%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+  }
+  .footer .col.page {
+    width: 20%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+  }
+  .sns-icon{
+    padding: 20px 20px 20px 20px;
+
   }
   .footer .col h1 {
     margin: 0;
@@ -968,7 +1008,7 @@ info {
     padding: 0;
   }
   .footer .col ul li {
-    color: #000000;
+    color: #ffffff;
     font-size: 18px;
     font-family: inherit;
     font-weight: bold;
@@ -977,6 +1017,9 @@ info {
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
+  }
+  .footer .col p {
+    color: #ffffff;
   }
   .social ul li {
     display: inline-block;
@@ -991,6 +1034,11 @@ info {
   }
   .clearfix {
     clear: both;
+  }
+  .copyright{
+    background-color: #0011ff;
+    text-align: center;
+    color: white;
   }
   @media only screen and (min-width: 1280px) {
     .contain {
@@ -1008,8 +1056,53 @@ info {
     }
   }
   @media only screen and (max-width: 950px) {
-    .footer .col {
-      width: 33%;
+    .footer {
+      background-color: #0b70d8 !important;
+    }
+    .footer .col.sns{
+      width: 100%;
+      height: auto;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    .footer .col.adress{
+      width: 100%;
+      height: auto;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    .footer .col.facebook {
+      width: 100%;
+      height: auto;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    .footer .col.logo {
+      display:none;
+    }
+    .footer .col.contact {
+      width: 50%;
+      height: auto;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 20px 20px 20px 20px;
+    }
+    .footer .col.page {
+      width: 50%;
+      height: auto;
+      float: left;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 20px 20px 20px 20px;
     }
     .footer .col h1 {
       font-size: 14px;

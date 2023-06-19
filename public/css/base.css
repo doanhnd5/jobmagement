@@ -357,6 +357,7 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
   #companyFaq .topMain_SectionTitle h2::before {
     content: '';
     background-image: url(../image/not_listed_location_fill_blue.svg);
@@ -430,7 +431,6 @@
       right: -1rem;
     }
   }
-
 
   /** List Job */
   .recList dl {

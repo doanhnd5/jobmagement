@@ -5,17 +5,14 @@
         <div class="fv-slider relative h-[520px]">
             <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
         </div>
-        <div class="fv-title bg-white">
-            <h1 class="font-bold text-base leading-[46px] text-40381F text-center pt-5 pb-2.5">Tổng hợp các job đang tuyển
-                dụng</h1>
-        </div>
     </section>
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
             <div class="sectionTitle text-center">
-                <h2 class="font-serif font-medium text-base md:text-xl text-center text-white my-2.5">
-                    <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">Thông tin tuyển dụng<br
-                            class="md:hidden"> đang hot</span>
+                <h2 class="font-serif font-medium text-base md:text-xl text-center text-blue my-2.5">
+                    <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">
+                    Thông tin tuyển dụng được nhiều người quan tâm
+                </span>
                 </h2>
             </div>
             <wee-slider data-loop="true" data-align="center" data-buttons-on-hover="true">

@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('content')
-    <section class="-mt-[50px] md:mt-0 mb-[50px] md:mb-25">
+    <section class="fv relative -mt-[50px] md:mt-0 mb-[50px] md:mb-25">
         <div class="relative h-[520px]">
             <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
             <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
@@ -16,8 +16,9 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="relative">
+
+    <section class="fv relative -mt-[50px] md:mt-0 mb-[50px] md:mb-25">
+        <div class="relative h-[0px]">
             <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
                 <div class="searchBox w-full max-w-[972px] h-auto p-2.5 rounded-lg lg:p-8 mx-auto">
                     <form method="get" id="searchform" action="#" class="flex gap-2 flex-wrap">
@@ -48,7 +49,26 @@
                             </div>
                             <div
                                 class="btnSearchItems w-full h-auto border border-solid border-gray-c rounded overflow-hidden bg-none ">
-
+                                <div class="btnBottom static bg-white h-auto">
+                                    <p class="btnBottomTxt w-full relative">
+                                        <i
+                                            class="icon-business-center-blue w-4.5 h-4.5 absolute top-1/2 -translate-y-1/2 left-0.5 md:left-2"></i>
+                                        <select name="categories[]" id="ddlJobType"
+                                            class="w-full h-[46px] px-5.5 md:px-[28px] font-body">
+                                            <option value="">Hình thức tuyển dụng</option>
+                                            @foreach (ScreenConst::JOB_TYPE_NAME as $jobTypeKey => $jobTypeName)
+                                                @if ($jobTypeKey == $srchJobType)
+                                                    <option value="{{ $jobTypeKey }}" selected>{{ $jobTypeName }}
+                                                    </option>
+                                                @else
+                                                    <option value="{{ $jobTypeKey }}">{{ $jobTypeName }}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                        <i
+                                            class="icon-chevron-right-blue w-4.5 h-4.5 absolute top-1/2 -translate-y-1/2 right-0.5 md:right-2"></i>
+                                    </p>
+                                </div>
                             </div>
                             <div
                                 class="btnSearchItems w-full h-auto border border-solid border-gray-c rounded overflow-hidden bg-none ">
@@ -76,7 +96,7 @@
                         </div>
                         <div class="text-search w-full flex-1 flex items-center justify-between">
                             <input type="text" id="txtKeyAny" value="{{ $srchKeyAny }}"
-                                data-url="{{ route('home.search') }}" placeholder="Từ khoá ( Tên thành phố , nội dung công việc, lương )"
+                                data-url="{{ route('home.search') }}" placeholder="Từ khoá (Thành phố, nội dung công việc, lương)"
                                 class="w-[calc(100%-46px)] rounded-l">
                             <button type="button" id="btnSearch" data-url="{{ route('home.search') }}"
                                 class="searchBoxSubmit bg-main-blue inline-flex items-center justify-center rounded-r">
@@ -88,6 +108,8 @@
             </div>
         </div>
     </section>
+
+
     <section class="popular pt-home mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px] xs:pt-home">
         <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
             <div class="sectionTitle text-center">

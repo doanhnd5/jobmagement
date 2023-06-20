@@ -196,7 +196,7 @@
         {!! $htmlTopJobsWithMostCandidatesHtmlArea !!}
     </section>
 
-    <section class="popular mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
+    <section class="popularPost mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         {!! $htmlPostList !!}
     </section>
 

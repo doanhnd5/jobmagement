@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #edf1f8;
     font-family: "Arial", sans-serif;
     top: 0 !important;
   }
@@ -921,11 +921,6 @@ info {
     rotate: 270deg;
   }
 
-  .wp-post-image {
-    width: 87px;
-    height: 70px
-  }
-
   .footer {
     width: 100%;
     position: relative;
@@ -1461,4 +1456,60 @@ a:hover {
       width: 200px;
       flex: 1 0 150px;
     }
+    .post_container {
+      grid-template-columns: 1fr; /* chỉ một cột trên mỗi hàng cho giao diện di động */
+    }
 }
+
+.post_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.post_item {
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.post_item_left, .post_item_right {
+  padding: 10px;
+}
+
+.post_item_left {
+  flex: 1;
+  max-width: 25%;
+}
+
+.post_item_right {
+  flex: 3;
+}
+  .wp-post-image {
+    width: 87px; /* chiều rộng tương đối */
+    height: 70px; /* chiều cao tương đối */
+    object-fit: cover; /* hoặc contain tùy thuộc vào yêu cầu của bạn */
+  }
+  @media (max-width: 950px) {
+    .post_container {
+      grid-template-columns: 1fr; /* chỉ một cột trên mỗi hàng cho giao diện di động */
+      grid-gap: 5px;
+    }
+    .post_item {
+      padding: 2px;
+      box-sizing: border-box;
+    }
+    .wp-post-image {
+      width: 43px; /* chiều rộng tương đối */
+      height: 35px; /* chiều cao tương đối */
+      object-fit: cover; /* hoặc contain tùy thuộc vào yêu cầu của bạn */
+    }
+    .post_item_left, .post_item_right {
+      padding: 2px;
+    }
+    .post_item, .post_item_left, .post_item_right {
+      font-size: 0.8em; /* giảm kích thước chữ */
+    }
+  }

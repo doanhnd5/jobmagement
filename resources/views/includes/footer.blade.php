@@ -19,7 +19,7 @@
                     Tòa nhà Narita 401, 1-17-6 Hyakuncho, Shinjuku-ku, Tokyo 
                 </p>
                 <p>
-                TEL: 03-6313-4267  Hotline: 080-3185-3426 <br/>Email: thanhgiangseikou@gmail.com
+                TEL: 03-6313-4267  Hotline: 080-1175-5868 <br/>Email: thanhgiangseikou@gmail.com
                 </p>             
                 </ul>
             </div>

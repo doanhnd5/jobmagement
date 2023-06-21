@@ -103,7 +103,7 @@
             <h1>Công ty TNHH <span class="notranslate"> SEIKOU T&T</span></h1>
             <p>〒169-0073 Tòa nhà Narita 401, 1-17-6 Hyakuncho, Shinjuku-ku, Tokyo</p>
             <p>TEL: 03-6313-4267</p>
-            <p>Hotline: 080-3185-3426</p>
+            <p>Hotline: 080-1175-5868</p>
             <p>Email: thanhgiangseikou@gmail.com</p>
           </div>
         </div>

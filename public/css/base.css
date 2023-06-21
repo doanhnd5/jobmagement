@@ -634,7 +634,7 @@ ul.hot_job li .job_detail {
     width: 150px;
     display: inline-block;
     padding: 1px 0 0 5px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .page-custom .pager {
@@ -854,6 +854,13 @@ info {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  .location-name {
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    white-space: nowrap;
+    text-overflow: ellipsis
   }
 
 .border-t-transparent {
@@ -1489,7 +1496,7 @@ a:hover {
 }
   .wp-post-image {
     width: 87px; /* chiều rộng tương đối */
-    height: 70px; /* chiều cao tương đối */
+    height: 79px; /* chiều cao tương đối */
     object-fit: cover; /* hoặc contain tùy thuộc vào yêu cầu của bạn */
   }
   @media (max-width: 950px) {
@@ -1501,11 +1508,7 @@ a:hover {
       padding: 2px;
       box-sizing: border-box;
     }
-    .wp-post-image {
-      width: 43px; /* chiều rộng tương đối */
-      height: 35px; /* chiều cao tương đối */
-      object-fit: cover; /* hoặc contain tùy thuộc vào yêu cầu của bạn */
-    }
+
     .post_item_left, .post_item_right {
       padding: 2px;
     }

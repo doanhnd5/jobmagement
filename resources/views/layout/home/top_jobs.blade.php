@@ -34,7 +34,7 @@
                                                     {{ ScreenConst::JOB_TYPE_NAME[$job['employment_type_id']] }}
                                                 </span>
                                             </h2>
-                                            <h2>
+                                            <h2 class="location-name" title="{{ $job['workplace_city'] }}">
                                                 <span class="text_excerpt">
                                                     <i class="icon-location-on-fill-blue w-3.5 h-3.5"></i>
                                                     {{ $job['workplace_city'] }}

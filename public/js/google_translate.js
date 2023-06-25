@@ -486,7 +486,7 @@ $(function() {
         c._ps = b + '/translate_static/css/translateelement.css';
         c._puh = 'translate.google.com';
         _loadCss(c._ps);
-        _loadJs(b + '/translate_static/js/element/main_en-GB.js');
+        _loadJs(b + '/translate_static/js/element/main.js');
     })();
 })();
 
@@ -497,5 +497,4 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element')
 }
-
 

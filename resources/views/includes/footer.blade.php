@@ -16,11 +16,11 @@
             <ul>
                 <p>
                 〒169-0073
-                    Tòa nhà Narita 401, 1-17-6 Hyakuncho, Shinjuku-ku, Tokyo 
+                    Tòa nhà Narita 401, 1-17-6 Hyakuncho, Shinjuku-ku, Tokyo
                 </p>
                 <p>
                 TEL: 03-6313-4267  Hotline: 080-1175-5868 <br/>Email: thanhgiangseikou@gmail.com
-                </p>             
+                </p>
                 </ul>
             </div>
                 <div class="col sns">
@@ -39,7 +39,6 @@
         </div>
     </div>
 
-    @include('includes.modal.change_password')
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v17.0" nonce="wwjPYoxd"></script>
 <hr>

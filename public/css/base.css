@@ -1388,7 +1388,7 @@ a:hover {
       font-size: 30px;
   }
   .footer-logo{
-    width: 50%;
+    width: 30%;
   }
   .checkbtn {
       display: block;
@@ -1515,4 +1515,10 @@ a:hover {
     .post_item, .post_item_left, .post_item_right {
       font-size: 0.8em; /* giảm kích thước chữ */
     }
+  }
+
+  .banner_img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
   }

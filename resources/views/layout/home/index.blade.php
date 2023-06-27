@@ -2,18 +2,8 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0 mb-[50px] md:mb-25">
-        <div class="relative h-[520px]">
-            <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
-            <div class="fvInner w-[96%] lg:w-full text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-9">
-                <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                    <span class="notranslate">Job - Visa</span>
-                </p>
-                <p class="font-serif font-semibold text-xl lg:text-[40px] lg:leading-[57px] tracking-widest text-white mb-9"
-                    style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                    <span class="notranslate">Japan</span>
-                </p>
-            </div>
+        <div class="relative h-[620px]">
+            <img src="{{ asset('image/banner21.jpg') }}" class="w-full h-full object-cover">
         </div>
     </section>
 
@@ -111,7 +101,7 @@
 
 
     <section class="popular pt-home mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px] xs:pt-home">
-        <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
+        <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8" style="background-color: #87CEFA">
             <div class="sectionTitle text-center">
                 <h2 class="font-serif font-medium text-base md:text-xl text-center text-0011ff text-4E4A40 my-2.5">
                     <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">

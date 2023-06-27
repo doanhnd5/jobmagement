@@ -5,7 +5,7 @@
         </h2>
 
     </div>
-    <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFDD">
+    <div class="popularInner py-4 px-1 md:px-8" id="divWorkBasic" style="background-color: #FFFFFF">
         <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">
             <ul class="hot_job">
                 <div class="popularCardlist pb-2 slick-initialized slick-slider slick-dotted">

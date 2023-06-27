@@ -2,12 +2,13 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0">
-        <div class="fv-slider relative h-[520px]">
-            <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
+        <div class="fv-slider relative h-[720px]">
+            <img src="{{ asset('image/jobbanner.jpg') }}" class="w-full h-full object-cover">
+            <img src="{{ asset('image/banner21.jpg') }}" class="w-full h-full object-cover md:hidden">
         </div>
     </section>
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
-        <div class="popularInner bg-CBE3FF py-4 px-1 md:px-8">
+        <div class="popularInner py-4 px-1 md:px-8" style="background-color: #FFFFFF">
             <div class="sectionTitle text-center">
                 <h2 class="font-serif font-medium text-base md:text-xl text-center text-blue my-2.5">
                     <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">
@@ -82,6 +83,8 @@
             </wee-slider>
         </div>
     </section>
+    <div id='google_translate_element'></div>
+
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
         <div class="main-wid p-[9px] md:p-0 container md:mx-auto lg:flow-root">
             <div class="main-col-recDetail">

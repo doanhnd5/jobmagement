@@ -2,8 +2,8 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0">
-        <div class="fv-slider relative h-[260px]">
-        <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
+        <div class="fv-slider relative h-[820px]">
+        <img src="{{ asset('image/visabanner.jpg') }}" class="w-full h-full object-cover">
         </div>
         <div class="fv-title bg-white">
             <h1 class="font-bold text-base leading-[46px] text-40381F text-center pt-5 pb-2.5">Danh sách bài đăng</h1>

@@ -2,8 +2,9 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0 mb-[50px] md:mb-25">
-        <div class="relative h-[620px]">
-            <img src="{{ asset('image/banner21.jpg') }}" class="w-full h-full object-cover">
+        <div class="relative img-banner-area">
+            <img src="{{ asset('image/banner21.jpg') }}" class="w-full object-cover banner"
+            srcset="{{ asset('image/banner21.jpg') }} 87w, {{ asset('image/banner21.jpg') }} 155w">
         </div>
     </section>
 

@@ -430,6 +430,21 @@
     .popularCardlist .slick-next {
       right: -1rem;
     }
+
+    .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
   }
 
   /** List Job */
@@ -897,6 +912,10 @@ info {
     display: none;
 }
 
+.img-banner-area {
+    max-height: 620px;
+}
+
 #tblList .detail,
 #tblList .btn-delete {
     text-align: -webkit-center;
@@ -1047,6 +1066,26 @@ info {
       width: 1200px;
       margin: 0 auto;
     }
+    .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
   }
   @media only screen and (max-width: 1139px) {
     .contain .social {
@@ -1055,6 +1094,26 @@ info {
     }
     .social h1 {
       margin: 0px;
+    }
+    .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
     }
   }
   @media only screen and (max-width: 950px) {
@@ -1112,6 +1171,30 @@ info {
     .footer .col ul li {
       font-size: 13px;
     }
+
+    .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
+
+    .py-4 {
+        padding-top: 3rem !important;
+    }
   }
   @media only screen and (max-width: 500px) {
       .footer .col {
@@ -1123,10 +1206,57 @@ info {
       .footer .col ul li {
         font-size: 13px;
       }
+      .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
+
+    .py-4 {
+        padding-top: 3rem !important;
+    }
   }
   @media only screen and (max-width: 340px) {
     .footer .col {
       width: 100%;
+    }
+    .recList dt {
+        width: 30%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 70%;
+        float: right;
+        margin: 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
+
+    .py-4 {
+        padding-top: 3rem !important;
     }
   }
 

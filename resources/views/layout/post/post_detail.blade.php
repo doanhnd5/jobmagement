@@ -10,7 +10,8 @@
 <div class="job-work-detail">
     <section class="fv relative -mt-[50px] md:mt-0 hidden md:block">
         <div class="fv-slider relative h-[260px]">
-          <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover">
+          <img src="{{ asset('image/banner.png') }}" class="w-full h-full object-cover"
+          srcset="{{ asset('image/banner.jpg') }} 87w, {{ asset('image/banner.jpg') }} 155w">
         </div>
     </section>
     <div class="max-w-[820px] m-auto">

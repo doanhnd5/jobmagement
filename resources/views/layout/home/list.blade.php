@@ -2,9 +2,10 @@
 
 @section('content')
     <section class="fv relative -mt-[50px] md:mt-0">
-        <div class="fv-slider relative h-[720px]">
-            <img src="{{ asset('image/jobbanner.jpg') }}" class="w-full h-full object-cover">
-            <img src="{{ asset('image/banner21.jpg') }}" class="w-full h-full object-cover md:hidden">
+        <div class="fv-slider relative img-banner-area">
+            <img src="{{ asset('image/jobbanner.jpg') }}" class="w-full h-full object-cover banner"
+            srcset="{{ asset('image/jobbanner.jpg') }} 87w, {{ asset('image/jobbanner.jpg') }} 155w">
+            {{-- <img src="{{ asset('image/banner21.jpg') }}" class="w-full h-full object-cover md:hidden"> --}}
         </div>
     </section>
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">

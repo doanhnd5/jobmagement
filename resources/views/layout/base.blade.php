@@ -129,6 +129,7 @@
 
     @include('includes.element.script')
     @yield('js')
+<<<<<<< HEAD
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
@@ -152,6 +153,8 @@
     }
 </script>
 
+=======
+>>>>>>> 6040ada29895bc2bdada1dface0d261ddf0290ca
 </body>
 
 </html>

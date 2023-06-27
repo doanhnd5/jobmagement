@@ -1207,7 +1207,7 @@ info {
         font-size: 13px;
       }
       .recList dt {
-        width: 30%;
+        width: 20%;
         float: left;
         margin: 0;
         padding: 0 0 0 0;
@@ -1227,7 +1227,7 @@ info {
     }
 
     .py-4 {
-        padding-top: 3rem !important;
+        padding-top: 4rem !important;
     }
   }
   @media only screen and (max-width: 340px) {
@@ -1235,7 +1235,7 @@ info {
       width: 100%;
     }
     .recList dt {
-        width: 30%;
+        width: 20%;
         float: left;
         margin: 0;
         padding: 0 0 0 0;
@@ -1244,7 +1244,7 @@ info {
         padding-left: 20px;
       }
       .recList dd {
-        width: 70%;
+        width: 80%;
         float: right;
         margin: 0;
     }
@@ -1256,7 +1256,7 @@ info {
     }
 
     .py-4 {
-        padding-top: 3rem !important;
+        padding-top: 4rem !important;
     }
   }
 

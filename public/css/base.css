@@ -1260,6 +1260,33 @@ info {
     }
   }
 
+  @media only screen and (max-width: 640px) {
+    .recList dt {
+        width: 20%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 80%;
+        float: right;
+        margin: 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
+
+    .py-4 {
+        padding-top: 4rem !important;
+    }
+  }
+
   .heading{
     width: 90%;
     display: flex;

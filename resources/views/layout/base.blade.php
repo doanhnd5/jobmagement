@@ -129,32 +129,27 @@
 
     @include('includes.element.script')
     @yield('js')
-<<<<<<< HEAD
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-    function removeGoogleTranslateLabel() {
-  const googleTranslateLabel = document.querySelector('.VIpgJd-ZVi9od-xl07Ob-lTBxed');
-  if (googleTranslateLabel) {
-    googleTranslateLabel.textContent = ''; // Xóa nội dung của phần tử
-  }
-}
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({  
-        pageLanguage: 'vi',
-        includedLanguages: 'en,id,vi,my,ja', // Ngôn ngữ được hiển thị
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Chế độ giao diện
-        autoDisplay: false, // Tắt hiển thị tự động
-        gaTrack: true, // Bật tích hợp Google Analytics (nếu có)
-        gaId: 'UA-12345678-9', // ID Google Analytics (nếu có)
-        multilanguagePage: true // Tự động phát hiện và dịch nhiều ngôn ngữ
-      }, 'google_translate_element');
-      removeGoogleTranslateLabel();
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function removeGoogleTranslateLabel() {
+    const googleTranslateLabel = document.querySelector('.VIpgJd-ZVi9od-xl07Ob-lTBxed');
+    if (googleTranslateLabel) {
+        googleTranslateLabel.textContent = ''; // Xóa nội dung của phần tử
     }
-</script>
-
-=======
->>>>>>> 6040ada29895bc2bdada1dface0d261ddf0290ca
+    }
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'vi',
+            includedLanguages: 'en,id,vi,my,ja', // Ngôn ngữ được hiển thị
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Chế độ giao diện
+            autoDisplay: false, // Tắt hiển thị tự động
+            gaTrack: true, // Bật tích hợp Google Analytics (nếu có)
+            gaId: 'UA-12345678-9', // ID Google Analytics (nếu có)
+            multilanguagePage: true // Tự động phát hiện và dịch nhiều ngôn ngữ
+        }, 'google_translate_element');
+        removeGoogleTranslateLabel();
+        }
+    </script>
 </body>
-
 </html>

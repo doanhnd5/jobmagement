@@ -916,6 +916,11 @@ info {
     max-height: 620px;
 }
 
+.job-img-list {
+    width: 282px;
+    max-height: 212px;
+}
+
 #tblList .detail,
 #tblList .btn-delete {
     text-align: -webkit-center;
@@ -1260,7 +1265,34 @@ info {
     }
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 575px) {
+    .recList dt {
+        width: 20%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 80%;
+        float: right;
+        margin: 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+    }
+
+    .py-4 {
+        padding-top: 4rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
     .recList dt {
         width: 20%;
         float: left;

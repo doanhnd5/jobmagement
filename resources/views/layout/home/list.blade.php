@@ -103,8 +103,8 @@
                                             <figure class="w-1/3 aspect-[53/40]"
                                                 data-url="{{ route('detail', ['id' => $job['id']]) }}">
                                                 <img src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
-                                                    width="282" height="212" alt=""
-                                                    class="w-full h-full object-cover">
+                                                    alt=""
+                                                    class="w-full object-cover job-img-list">
                                             </figure>
                                             <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 job-name" title="{{ $job->job_name ?? '' }}">
                                                 {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}

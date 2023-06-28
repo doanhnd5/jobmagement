@@ -12,12 +12,12 @@
     flex-direction: column;
     height: 100vh;
     background-color: #edf1f8;
-    font-family: "Arial", sans-serif;
+    font-family: "Noto Serif JP", sans-serif;
     top: 0 !important;
   }
 
   body, body * {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Serif JP", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   }
 
   main {

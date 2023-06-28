@@ -71,7 +71,7 @@
             </div>
             <div class="col facebook">
                 <ul>
-                <div class="fb-page" data-href="https://www.facebook.com/thanhgiangseikou" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="true" data-height="150" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thanhgiangseikou" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thanhgiangseikou">Visa &amp; Jobs Thanh Giang Seikou</a></blockquote></div>
+                <div class="fb-page" data-href="https://www.facebook.com/thanhgiangseikou" data-tabs="timeline" data-width="400" data-small-header="false" data-adapt-container-width="true" data-height="150" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thanhgiangseikou" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thanhgiangseikou">Visa &amp; Jobs Thanh Giang Seikou</a></blockquote></div>
                 </ul>
             </div>
             <div class="clearfix"></div>

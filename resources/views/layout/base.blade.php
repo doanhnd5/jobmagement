@@ -18,7 +18,7 @@
     <style>
     /*<![CDATA[*/
     #google_translate_element {
-        padding-right: 10px;
+        margin-right: 10px;
         position: static;
         right: 42px;
         transform: scale(3);

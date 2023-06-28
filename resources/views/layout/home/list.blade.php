@@ -9,7 +9,7 @@
         </div>
     </section>
     <section class="popular pt-7.5 mx-2 md:mx-auto mb-9.5 md:mb-11 md:max-w-[1240px]">
-        <div class="popularInner py-4 px-1 md:px-8" style="background-color: #FFFFFF">
+        <div class="popularInner py-4-hot-job-list px-1 md:px-8" style="background-color: #FFFFFF">
             <div class="sectionTitle text-center">
                 <h2 class="font-serif font-medium text-base md:text-xl text-center text-blue my-2.5">
                     <span class="relative inline-block pt-6 pl-[12.5px] lg:pl-[26.18px]">
@@ -94,7 +94,7 @@
                         class="list-job font-serif grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-[2%] xl:gap-x-[5%]">
                         @if ($jobBasicList && !$jobBasicList->isEmpty())
                             @foreach ($jobBasicList as $job)
-                                <li class="relative bg-white py-4 px-2 border-t-4 border-solid border-main-blue mb-6">
+                                <li class="relative bg-white py-4 px-2 border-t-4 border-solid border-main-blue mb-6 li-job-list">
                                     <h3 class="company-name text-main-blown p-0 mb-4 text-sm lg:text-base font-bold">
                                         {{ $job->company_name ?? '' }}
                                     </h3>

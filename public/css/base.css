@@ -622,7 +622,7 @@ ul.hot_job {
 
 ul.hot_job li {
     display: inline-block;
-    width: 245px;
+    /* width: 245px; */
     margin: 0 16px 22px 0;
     font-size: 12px;
     color: #333;
@@ -922,6 +922,17 @@ info {
 
 }
 
+.li-job-list {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.py-4-hot-job-list {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 20px;
+}
+
 #tblList .detail,
 #tblList .btn-delete {
     text-align: -webkit-center;
@@ -1092,6 +1103,11 @@ info {
         height: auto;
         max-height: 650px;
     }
+
+    .li-job-list {
+        min-width: 50px;
+        min-height: 50px;
+    }
   }
   @media only screen and (max-width: 1139px) {
     .contain .social {
@@ -1120,6 +1136,11 @@ info {
         width: 100%;
         height: auto;
         max-height: 650px;
+    }
+
+    .li-job-list {
+        min-width: 50px !important;
+        min-height: 50px !important;
     }
   }
   @media only screen and (max-width: 950px) {
@@ -1201,6 +1222,11 @@ info {
     .py-4 {
         padding-top: 3rem !important;
     }
+
+    .li-job-list {
+        min-width: 80px !important;
+        min-height: 80px !important;
+    }
   }
   @media only screen and (max-width: 500px) {
       .footer .col {
@@ -1235,6 +1261,16 @@ info {
     .py-4 {
         padding-top: 4rem !important;
     }
+
+    .li-job-list {
+        min-width: 50px !important;
+        min-height: 50px !important;
+    }
+
+    ul.hot_job li .job_detail {
+        width: 350px !important;
+    }
+
   }
   @media only screen and (max-width: 340px) {
     .footer .col {
@@ -1264,6 +1300,10 @@ info {
     .py-4 {
         padding-top: 4rem !important;
     }
+
+    ul.hot_job li .job_detail {
+        width: 350px !important;
+    }
   }
 
   @media only screen and (max-width: 575px) {
@@ -1291,6 +1331,10 @@ info {
     .py-4 {
         padding-top: 4rem !important;
     }
+
+    ul.hot_job li .job_detail {
+        width: 350px !important;
+    }
   }
 
   @media only screen and (max-width: 576px) {
@@ -1317,6 +1361,10 @@ info {
 
     .py-4 {
         padding-top: 4rem !important;
+    }
+
+    ul.hot_job li .job_detail {
+        width: 350px !important;
     }
   }
 
@@ -1412,6 +1460,11 @@ info {
 
     .about-content {
       margin-top: 0;
+    }
+
+    ul.hot_job li .job_detail {
+        /* width: auto !important; */
+        min-width: 130px;
     }
   }
   .text-left {

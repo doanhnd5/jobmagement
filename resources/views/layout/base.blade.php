@@ -13,6 +13,8 @@
     , グローバルサポート, 外国人サポート, 外国人仕事紹介, visa, japan visa
     keyword3">
     <link rel="icon" href="{{ url('image/logo2.png') }}">
+    <meta name="description" content="HANH GIANG SEIKOU - 人材サポート 技能実習生の紹介 特定技能ビザ取得者の紹介 べトナム現地日本語教育運営 留学ビジネス ビザ取得代行サービス 留学生の生活サポート（インターネット、不動産紹介、行政手続き、金融機関手続き など）">
+
     {{-- CSS --}}
     @include('includes.element.link')
     {{-- CSS For Screen --}}

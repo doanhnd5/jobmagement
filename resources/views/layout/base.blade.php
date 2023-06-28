@@ -9,7 +9,9 @@
     <meta name="description"
         content="Công ty cổ phần SEIKOU T&T, cup cấp dịch vụ hỗ trợ, phục vụ người Việt và nước ngoài tại Nhật.">
     @yield('ogp-meta')
-
+    <meta name="keywords" content="THANH GIANG SEIKOU - 人材サポート, SEIKOU - ビザサポート,
+    , グローバルサポート, 外国人サポート, 外国人仕事紹介, visa, japan visa
+    keyword3">
     <link rel="icon" href="{{ url('image/logo2.png') }}">
     {{-- CSS --}}
     @include('includes.element.link')

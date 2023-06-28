@@ -98,37 +98,51 @@
                                     <h3 class="company-name text-main-blown p-0 mb-4 text-sm lg:text-base font-bold">
                                         {{ $job->company_name ?? '' }}
                                     </h3>
-                                    <a class="recDetail mb-2">
-                                        <div class="flex justify-between items-center mb-4">
-                                            <figure class="w-1/3 aspect-[53/40]"
-                                                data-url="{{ route('detail', ['id' => $job['id']]) }}">
-                                                <img src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
-                                                    alt=""
-                                                    class="w-full object-cover job-img-list">
-                                            </figure>
-                                            <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 job-name" title="{{ $job->job_name ?? '' }}">
-                                                {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}
-                                            </p>
+                                    <div class="post_item">
+                                        <div class="post_item_left">
+                                            <div class="hot_job_img">
+                                                <figure>
+                                                    <img src="{{ $job->image_name ? asset('image/uploaded/' . $job->image_name) : asset('image/uploaded/job_1.jpg') }}"
+                                                        class="alpha wp-post-image"
+                                                        loading="lazy"
+                                                        sizes="(max-width: 87px) 100vw, 87px">
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="txt mb-4 w-full">
-                                            <dl>
-                                                <dt class="place"><span class="font-bold">Địa điểm</span></dt>
-                                                <dd>{{ $job->workplace_city }}</dd>
-                                            </dl>
-                                            <dl>
-                                                <dt class="icon-currency-yen-blue"><span class="font-bold">Mức lương</span>
-                                                </dt>
-                                                <dd>
-                                                    {{ App\Libs\SystemUtil::formatNumber($job->salary) }}
-                                                </dd>
-                                            </dl>
-                                            <dl>
-                                                <dt class="type"><span class="font-bold">Trạng thái</span></dt>
-                                                <dd class="employee">
-                                                    {{ ScreenConst::JOB_TYPE_NAME[$job['employment_type_id']] }}</dd>
-                                            </dl>
+                                        <div class="post_item_right">
+                                            <div class="">
+                                                   <h3>
+                                                        <strong> {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}</strong>
+                                                    </h3>
+                                            </div>
                                         </div>
-                                    </a>
+                                    </div>
+                                        <div class="txt mb-4 w-full ">
+                                        <table style="border: none;">
+                                            <tr style="border: none;">
+                                                <td class="detail_text" scope="col" style="border: none; width: 30%;">
+                                                    <i class="icon-location-on-fill-blue w-3.5 h-3.5"></i>Địa điểm
+                                                </td>
+                                                <td class="detail_text" style="border: none;">{{ $job->workplace_city }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="detail_text" scope="row" style="border: none;width: 30%;">
+                                                   <i class="icon-currency-yen-blue w-3.5 h-3.5"></i> Mức lương
+                                                </td>
+                                                <td class="detail_text" style="border: none;">
+                                                        {{ App\Libs\SystemUtil::formatNumber($job->salary) }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="detail_text" scope="row" style="border: none;width: 30%;">
+                                                <i class="icon-group-fill-blue w-3.5 h-3.5"></i>Trạng thái
+                                                </td>
+                                                <td class="detail_text" style="border: none;">
+                                                    {{ ScreenConst::JOB_TYPE_NAME[$job['employment_type_id']] }}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </div>
                                     <div class="btns h-9 text-center">
                                         <a href="{{ route('apply', ['id' => $job['id']]) }}"
                                             class="detailBtn w-[152px] h-9 inline-flex items-center justify-center bg-FF7A00 rounded absolute bottom-4 left-1/2 -translate-x-1/2">

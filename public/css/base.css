@@ -1268,7 +1268,7 @@ info {
     }
 
     ul.hot_job li .job_detail {
-        width: 350px !important;
+        width: 350px;
     }
 
   }
@@ -1302,7 +1302,7 @@ info {
     }
 
     ul.hot_job li .job_detail {
-        width: 350px !important;
+        width: 45px !important;
     }
 
 
@@ -1335,7 +1335,7 @@ info {
     }
 
     ul.hot_job li .job_detail {
-        width: 350px !important;
+        width: 350px;
     }
   }
 
@@ -1366,10 +1366,21 @@ info {
     }
 
     ul.hot_job li .job_detail {
-        width: 350px !important;
+        width: 350px;
     }
   }
 
+  @media only screen and (max-width: 495px) and (min-width: 395px)  {
+        ul.hot_job li .job_detail {
+            width: 250px;
+        }
+  }
+
+  @media only screen and (max-width: 390px) and (min-width: 300px)  {
+    ul.hot_job li .job_detail {
+        width: 200px;
+    }
+}
   .heading{
     width: 90%;
     display: flex;
@@ -1466,7 +1477,7 @@ info {
 
     ul.hot_job li .job_detail {
         /* width: auto !important; */
-        min-width: 130px;
+        min-width: 100px;
     }
   }
   .text-left {

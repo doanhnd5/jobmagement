@@ -96,7 +96,7 @@
                             @foreach ($jobBasicList as $job)
                                 <li class="relative bg-white py-4 px-2 border-t-4 border-solid border-main-blue mb-6 li-job-list">
                                     <h3 class="company-name text-main-blown p-0 mb-4 text-sm lg:text-base font-bold">
-                                        {{ $job->company_name ?? '' }}
+                                    {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}
                                     </h3>
                                     <a class="recDetail mb-2">
                                         <div class="flex justify-between items-center mb-4">
@@ -107,8 +107,8 @@
                                                     class="w-full object-cover job-img-list">
                                             </figure>
                                             <p class="job-name text-sm font-bold tracking-[0.01em] w-2/3 ml-2 job-name" title="{{ $job->job_name ?? '' }}">
-                                                {{ $job->job_name ?? 'Tuyển dụng nhân viên' }}
-                                            </p>
+                                            {{ $job->company_name ?? '' }}
+                                        </p>
                                         </div>
                                         <div class="txt mb-4 w-full">
                                             <dl>

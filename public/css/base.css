@@ -1374,11 +1374,41 @@ info {
         ul.hot_job li .job_detail {
             width: 250px;
         }
+
+        .recList dt {
+            width: 50%;
+            float: left;
+            margin: 0;
+            padding: 0 0 0 0;
+          }
+          .recList dt span {
+            padding-left: 20px;
+          }
+          .recList dd {
+            width: 50%;
+            float: right;
+            margin: 0;
+        }
   }
 
   @media only screen and (max-width: 390px) and (min-width: 300px)  {
     ul.hot_job li .job_detail {
         width: 200px;
+    }
+
+    .recList dt {
+        width: 50%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+      .recList dt span {
+        padding-left: 20px;
+      }
+      .recList dd {
+        width: 50%;
+        float: right;
+        margin: 0;
     }
 }
   .heading{

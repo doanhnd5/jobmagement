@@ -128,10 +128,10 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset(App\Libs\AssetHelper::cacheBusting('css/home.css')) }}">
 @stop
 
 
 @section('js')
-    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/home.js')) }}"></script>
 @stop

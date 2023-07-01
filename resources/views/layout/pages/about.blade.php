@@ -97,7 +97,7 @@
                                 <td class="text-left">Tel / FAX</td>
                                 <td class="text-left">TEL: 03-6313-4267 <br>
                                     Hotline: 080-3185-3426 <br>
-                                    Email: <a href="mailto:thanhgiangseikou@gmail.com">thanhgiangseikou@gmail.com</a> 
+                                    Email: <a href="mailto:thanhgiangseikou@gmail.com">thanhgiangseikou@gmail.com</a>
                                     &nbsp;– Website: seikou-tt.jp</td>
                             </tr>
                         </tbody>
@@ -110,5 +110,5 @@
 
 @stop
 @section('js')
-<script src="{{ asset('js/home.js') }}"></script>
+<script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/home.js')) }}"></script>
 @endsection

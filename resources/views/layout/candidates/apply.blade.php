@@ -167,7 +167,7 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/apply.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/apply.js')) }}"></script>
 @endsection
 
 

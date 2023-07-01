@@ -121,5 +121,5 @@
 @stop
 
 @section('js')
-<script src="{{ asset('js/home.js') }}"></script>
+<script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/home.js')) }}"></script>
 @endsection

@@ -77,6 +77,6 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/createPost.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/createPost.js')) }}"></script>
 @endsection
 

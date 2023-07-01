@@ -153,5 +153,5 @@
 @stop
 
 @section('js')
-    <script src="{{ asset('js/list.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/list.js')) }}"></script>
 @stop

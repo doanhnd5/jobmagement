@@ -19,5 +19,5 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/workJob.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/workJob.js')) }}"></script>
 @endsection

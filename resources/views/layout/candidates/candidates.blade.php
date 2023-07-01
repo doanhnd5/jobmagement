@@ -73,7 +73,7 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/candidates.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/candidates.js')) }}"></script>
 @endsection
 
 

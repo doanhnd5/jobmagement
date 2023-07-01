@@ -26,5 +26,5 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/post.js') }}"></script>
+    <script src="{{ asset(App\Libs\AssetHelper::cacheBusting('js/post.js')) }}"></script>
 @endsection
